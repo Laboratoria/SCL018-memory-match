@@ -1,7 +1,6 @@
 body {
     background-color: #ffc300;
 }
-
 .contenedor-index {
   width: 1300px;/*ancho de un elemento*/
   height: 690px;/*altura de un elemnto */
@@ -13,7 +12,7 @@ body {
 
 .contenedor-titulo h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;/*fuentes del texto*/
-    font-size: 50pt;/*dimension de letras*/
+    font-size: 50pt;/*dimension de letras*/*
     color : #581845;
     text-align: center;
     margin: 0 ;
