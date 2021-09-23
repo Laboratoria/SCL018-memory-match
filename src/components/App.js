@@ -15,46 +15,10 @@ console.log(pokemon);
 //
 
 const App = () => {
-  
-  //1) Crear una variable que contenga las imágenes a utilizar en las tarjetas, llamandolas desde el objeto en main.js.
-
-  let imagenes = pokemon.items; 
-  console.log(imagenes);
-
-  //2) Duplicar estas imágenes con la método concat() para que queden en pares.
-
-  //let totalImagenes = imagenesconcat(imagenes);
-
-  //3) Crear una función que reparta las tarjetas en un html dinámico.
-
-  let reparteTarjetas =()=> {
-
-    /*let mesa = document.getElementById("tablero").innerHTML = " ";
-
-    imagenes.forEach((elemento)=>{
-
-        let tarjeta = document.createElement("div");
-
-        tarjeta.innerHTML=
-
-        <div class="area-tarjeta">
-        <div class="tarjeta">
-        <div class="cara-trasera"> + elemento + </div>
-        <div class="cara-superior">
-        </div>
-        </div>
-        </div>
-
-        mesa.appendChild(tarjeta);
-
-    });
-}*/
-
-
   const el = document.createElement('div');
 
   el.className = 'App';
-  el.textContent = 'Hola mundo!';
+  el.textContent = '';
 
   return el;
 };
