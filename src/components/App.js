@@ -2,7 +2,7 @@
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
 //
-import pokemon from '../data/pokemon/pokemon.js';
+ import pokemon from '../data/pokemon/pokemon.js';
 console.log(pokemon);
 //
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
@@ -54,7 +54,7 @@ const App = () => {
   const el = document.createElement('div');
 
   el.className = 'App';
-  el.textContent = 'Hola mundo!';
+  el.textContent = '';
 
   return el;
 };
