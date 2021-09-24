@@ -7,6 +7,5 @@ export default {
       { id: 'homero', image: 'https://i.imgur.com/dDZgcys.png', bgColor: '#F05032' },
       { id: 'abraham', image: 'https://i.imgur.com/YIed574.png', bgColor: '#F05032' },
       { id: 'bart', image: 'https://i.imgur.com/shc45uL.png', bgColor: '#F05032' },
-     
     ],
   };

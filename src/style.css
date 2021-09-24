@@ -1,18 +1,20 @@
-body {
-    background-color: #ffc300;
-    text-align: center;
+@font-face {
+  font-family: "simpsonFont";
+  src: url("fuentes/Simpsonfont DEMO.otf");
 }
-.contenedor-index {
-  width: 1300px;/*ancho de un elemento*/
-  height: 690px;/*altura de un elemnto */
-  display: flex;/*Los elementos se distribuyen de izquierda a derecha*/
-  justify-content: center;/* distribuye el espacio entre y alrededor de los items flex*/
-  position:absolute;/*posicionar elementos de manera absoluta*/
-  text-align: center; /*alineacion del texto en el centro*/
+body {
+    background-color: white;
+    text-align: center;
+    width: 1300px;/*ancho de un elemento*/
+    height: 690px;/*altura de un elemnto */
+    display: flex;/*Los elementos se distribuyen de izquierda a derecha*/
+    justify-content: center;/* distribuye el espacio entre y alrededor de los items flex*/
+    position:absolute;/*posicionar elementos de manera absoluta*/
+    text-align: center; /*alineacion del texto en el centro*/
 }
 
 .contenedor-titulo h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;/*fuentes del texto*/
+    font-family: "simpsonFont";/*fuentes del texto*/
     font-size: 50pt;/*dimension de letras*/
     color : #581845;
     text-align: center;
@@ -21,8 +23,8 @@ body {
   
 }
 :root {
-  --w: calc(70vw / 4);/*ancho */
-  --h: calc(70vh / 3);/*alto */
+  --w: calc(70vw / 6);/*ancho */
+  --h: calc(70vh / 5);/*alto */
 }
 
 * {/*para todos los elementos */
@@ -39,7 +41,7 @@ div {
 .cara-superior {
   cursor: pointer;
   width: var(--w);/*ancho*/
-  min-width: 100px;/*ancho minimo*/
+  min-width: 200px;/*ancho minimo*/
   height: var(--h);/*largo*/
   border-radius: 20px;
 }
