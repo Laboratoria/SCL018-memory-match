@@ -3,14 +3,14 @@
   src: url("fuentes/Simpsonfont DEMO.otf");
 }
 body {
-    background-color: white;
-    text-align: center;
-    width: 1300px;/*ancho de un elemento*/
-    height: 690px;/*altura de un elemnto */
-    display: flex;/*Los elementos se distribuyen de izquierda a derecha*/
-    justify-content: center;/* distribuye el espacio entre y alrededor de los items flex*/
-    position:absolute;/*posicionar elementos de manera absoluta*/
-    text-align: center; /*alineacion del texto en el centro*/
+  background: white;
+  text-align: center;
+  width: 1300px;/*ancho de un elemento*/
+  height: 690px;/*altura de un elemnto */
+  display: flex;/*Los elementos se distribuyen de izquierda a derecha*/
+  justify-content: center;/* distribuye el espacio entre y alrededor de los items flex*/
+  position: absolute;/*posicionar elementos de manera absoluta*/
+  text-align: center; /*alineacion del texto en el centro*/
 }
 
 .contenedor-titulo h1{
@@ -67,7 +67,7 @@ div {
 }
 
 .cara-superior {
-  background: #900c3f;
+  background: black ;
 }
 @keyframes inicio {
   20%,90%{/*gira la cara*/

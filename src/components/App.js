@@ -18,7 +18,7 @@ const App = () => {
 
   //1) Crear una variable que contenga las imágenes a utilizar en las tarjetas, llamandolas desde el objeto en main.js.
 
-  let imagenes = simpson.items; 
+  let imagenes = simpson.items; /*estamos al objeto simpson pero solo al array items*/ 
   //console.log(imagenes);
 
   //2) Duplicar estas imágenes con la método concat() para que queden en pares.
