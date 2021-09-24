@@ -2,7 +2,7 @@
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
 //
- import simpson from '../data/simpson/simpson.js';
+import simpson from '../data/simpson/simpson.js';
 //console.log(simpson);
 //
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
@@ -30,7 +30,7 @@ const App = () => {
 
   function reparteTarjetas() {
 
-    let mesa  = document.getElementById("tablero");
+    let mesa = document.getElementById("tablero");
 
     mesa.innerHTML = " ";
 
@@ -42,7 +42,7 @@ const App = () => {
 
       tarjeta.innerHTML =
 
-     `<div class="area-tarjeta">
+      `<div class="area-tarjeta">
       <div class="tarjeta">
       <div class="cara-trasera"> + ${imagen} + </div>
       <div class="cara-superior">
@@ -54,9 +54,9 @@ const App = () => {
 
     }
 
+    }
+    reparteTarjetas();
   }
-  reparteTarjetas();
-}
   
 
 
@@ -67,6 +67,6 @@ const App = () => {
   el.textContent = '';
 
   return el;
-};*/
+  };*/
 
 export default App;
