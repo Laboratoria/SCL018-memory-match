@@ -17,8 +17,9 @@ body {
 
 .contenedor-titulo h1{
     font-family: "simpsonFont";/*fuentes del texto*/
-    font-size: 50pt;/*dimension de letras*/
-    color : #581845;
+    font-size: 70pt;/*dimension de letras*/
+    color : #FED420;
+    /*text-shadow:#dfbb1c 0.1em 0.1em 0.2em;*/
     text-align: center;
     margin: 0 ;
     position: relative;
@@ -46,6 +47,9 @@ div {
   min-width: 200px;/*ancho minimo*/
   height: var(--h);/*largo*/
   border-radius: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 4px;
 }
 
 .tarjeta {
@@ -57,7 +61,7 @@ div {
 .cara-superior, .cara-trasera {
   position: absolute;
   backface-visibility: hidden;
-  box-shadow: inset 0 0 0 5px #581845;/*borde de tarjeta */
+  /*box-shadow: inset 0 0 0 5px ;/*borde de tarjeta */
   display: flex;
 }
 .area-tarjeta:hover .tarjeta{
@@ -69,7 +73,9 @@ div {
 }
 
 .cara-superior {
-  background: black ;
+  background-image: url("imagenes/caravisiblee.jpg");
+  background-size: cover;
+
 }
 @keyframes inicio {
   20%,90%{/*gira la cara*/
