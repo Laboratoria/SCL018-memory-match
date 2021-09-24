@@ -1,12 +1,20 @@
 export default {
     name: 'simpson',
     items: [
-      { id: 'marge', image: 'https://i.imgur.com/96NVlic.png', bgColor: '#339933' },
-      { id: 'maggie', image: 'https://i.imgur.com/qWhUEFw.png', bgColor: '#339933' },
-      { id: 'lisa', image: 'https://i.imgur.com/ursOuml.png', bgColor: '#339933' },
-      { id: 'homero', image: 'https://i.imgur.com/dDZgcys.png', bgColor: '#F05032' },
-      { id: 'abraham', image: 'https://i.imgur.com/YIed574.png', bgColor: '#F05032' },
-      { id: 'bart', image: 'https://i.imgur.com/shc45uL.png', bgColor: '#F05032' },
-     
+      { id: 'marge', image: 'https://i.imgur.com/96NVlic.png', bgColor: '#FFEC5E' },
+      { id: 'maggie', image: 'https://i.imgur.com/qWhUEFw.png', bgColor: '#FFEC5E' },
+      { id: 'lisa', image: 'https://i.imgur.com/ursOuml.png', bgColor: '#FFEC5E' },
+      { id: 'homero', image: 'https://i.imgur.com/dDZgcys.png', bgColor: '#FFEC5E' },
+      { id: 'abraham', image: 'https://i.imgur.com/YIed574.png', bgColor: '#FFEC5E' },
+      { id: 'bart', image: 'https://i.imgur.com/shc45uL.png', bgColor: '#FFEC5E' },
+      { id: 'barney', image: 'https://i.imgur.com/eyvEDbF.png', bgColor: '#FFEC5E' },
+      { id: 'apu', image: 'https://i.imgur.com/E8fxNjB.png', bgColor: '#FFEC5E' },
+      { id: 'pattyselma', image: 'https://i.imgur.com/86cSB3g.png', bgColor: '#FFEC5E' },
+      { id: 'moe', image: 'https://i.imgur.com/uMOpYl0.png', bgColor: '#FFEC5E' },
+      { id: 'burns', image: 'https://i.imgur.com/lUSOboi.png', bgColor: '#FFEC5E' },
+      { id: 'flanders', image: 'https://i.imgur.com/w92Vpqs.png', bgColor: '#FFEC5E' },
+      { id: 'milhouse', image: 'https://i.imgur.com/ZHZ9CjJ.png', bgColor: '#FFEC5E' },
+      { id: 'krusty', image: 'https://i.imgur.com/wMwSzvH.png', bgColor: '#FFEC5E' },
+      { id: 'jefeGorgori', image: 'https://i.imgur.com/E8s74TN.png', bgColor: '#FFEC5E' },
     ],
   };
