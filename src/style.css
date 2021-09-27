@@ -20,7 +20,7 @@ body {
     font-family: "simpsonFont";/*fuentes del texto*/
     font-size: 70pt;/*dimension de letras*/
     color : #FED420;
-    /*text-shadow:#dfbb1c 0.1em 0.1em 0.2em;*/
+    text-shadow:#dfbb1c 0.1em 0.1em 0.5em;
     text-align: center;
     margin: 0 ;
     position: relative;
@@ -77,7 +77,6 @@ div {
 .cara-superior {
   background-image: url("imagenes/caravisiblee.jpg");
   background-size: cover;
-
 }
 @keyframes inicio {
   20%,90%{/*gira la cara*/

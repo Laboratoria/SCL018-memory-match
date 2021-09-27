@@ -24,6 +24,8 @@ const App = () => {
   //2) Duplicar estas imágenes con la método concat() para que queden en pares.
 
   let totalImagenes = imagenes.concat(imagenes);
+  
+  totalImagenes.sort(() => Math.random() - 0.5)
 
   //3) Crear una función que reparta las tarjetas en un html dinámico.
 
@@ -48,13 +50,15 @@ const App = () => {
       </div>
       </div>
       </div>`
-
-      mesa.appendChild(tarjeta);
-    }
       
+      mesa.appendChild(tarjeta);
+    }  
+    
     }
     reparteTarjetas();
   } 
+  //funcion para revolver 
+  // 1 
   
 
   
