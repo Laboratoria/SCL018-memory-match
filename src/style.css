@@ -13,6 +13,7 @@ body {
   text-align: center; /*alineacion del texto en el centro*/
   background-image: url("imagenes/fondoo.png");
   background-size: cover;
+  
 }
 
 .contenedor-titulo h1{
