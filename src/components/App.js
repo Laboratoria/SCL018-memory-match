@@ -24,7 +24,6 @@ const App = () => {
   //2) Duplicar estas imágenes con la método concat() para que queden en pares.
 
   let totalImagenes = imagenes.concat(imagenes);
-  console.log(totalImagenes);
 
   //3) Crear una función que reparta las tarjetas en un html dinámico.
 
@@ -57,6 +56,7 @@ const App = () => {
     reparteTarjetas();
   } 
   
+
   
 
 

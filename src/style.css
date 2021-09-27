@@ -13,6 +13,7 @@ body {
   text-align: center; /*alineacion del texto en el centro*/
   background-image: url("imagenes/fondoo.png");
   background-size: cover;
+  
 }
 
 .contenedor-titulo h1{
@@ -32,6 +33,7 @@ body {
 
 * {/*para todos los elementos */
   transition: all 0.5s;
+  cursor:url("imagenes/pezSimpsons1.png"), auto;
 }
 
 div {
