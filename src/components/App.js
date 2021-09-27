@@ -36,7 +36,7 @@ const App = () => {
 
     totalImagenes.forEach(myFunction);
 
-    function myFunction(imagen) {
+    function myFunction(elemento) {
     
       let tarjeta = document.createElement("div");
 
@@ -44,14 +44,13 @@ const App = () => {
       
       `<div class="area-tarjeta">
       <div class="tarjeta">
-      <div class="cara-trasera"> + ${imagen} + </div>
+      <div class="cara-trasera"> <img src = "${elemento.imageUrl}"/> </div>
       <div class="cara-superior">
       </div>
       </div>
       </div>`
 
       mesa.appendChild(tarjeta);
-
     }
       
     }
