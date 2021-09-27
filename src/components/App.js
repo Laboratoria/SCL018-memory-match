@@ -24,8 +24,7 @@ const App = () => {
   //2) Duplicar estas imágenes con la método concat() para que queden en pares.
 
   let totalImagenes = imagenes.concat(imagenes);
-  console.log(totalImagenes);
-
+  totalImagenes.sort(() => Math.random() - 0.5)
   //3) Crear una función que reparta las tarjetas en un html dinámico.
 
   function reparteTarjetas() {
@@ -35,8 +34,8 @@ const App = () => {
     mesa.innerHTML = " ";
 
     totalImagenes.forEach(myFunction);
-   
-    function myFunction(imagen) {
+
+    function myFunction(elemento) {
     
       let tarjeta = document.createElement("div");
 
@@ -44,19 +43,20 @@ const App = () => {
       
       `<div class="area-tarjeta">
       <div class="tarjeta">
-      <div class="cara-trasera"> + ${imagen} + </div>
+      <div class="cara-trasera"> <img src = "${elemento.imageUrl}"/> </div>
       <div class="cara-superior">
       </div>
       </div>
       </div>`
-
-      mesa.appendChild(tarjeta);
-
-    }
       
+      mesa.appendChild(tarjeta);
+    }  
+    
     }
     reparteTarjetas();
   } 
+  //funcion para revolver 
+  // 1 
   
   
 
