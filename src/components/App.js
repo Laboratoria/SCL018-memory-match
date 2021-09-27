@@ -35,7 +35,7 @@ const App = () => {
     mesa.innerHTML = " ";
 
     totalImagenes.forEach(myFunction);
-
+   
     function myFunction(imagen) {
     
       let tarjeta = document.createElement("div");
