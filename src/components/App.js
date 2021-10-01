@@ -13,7 +13,8 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
-
+import Mononoke from '../data/Ghibli/Ghibli.js';
+console.log(Mononoke);
 const App = () => {
   const el = document.createElement('div');
 
