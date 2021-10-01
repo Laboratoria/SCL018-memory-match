@@ -1,0 +1,45 @@
+
+
+.mononoke-logo {
+  position: absolute;
+  width: 507px;
+  height: 108px;
+  left: 496px;
+  top: 30px;
+}
+
+.container-box {
+    position: absolute;
+width: 846px;
+height: 753px;
+left: 73px;
+top: 186px;
+
+background: rgba(50, 224, 214, 0.23);
+mix-blend-mode: normal;
+border-radius: 25px;
+}
+
+.side-box {
+    position: absolute;
+width: 372px;
+height: 753px;
+left: 995px;
+top: 186px;
+
+background: rgba(50, 224, 214, 0.23);
+mix-blend-mode: normal;
+border-radius: 25px;
+}
+
+.score-box{
+    position: absolute;
+    width: 280px;
+    height: 242px;
+    left: 51px;
+    top: 34px;
+    
+    background: rgba(196, 196, 196, 0.5);
+    mix-blend-mode: normal;
+    border-radius: 10px;
+}
