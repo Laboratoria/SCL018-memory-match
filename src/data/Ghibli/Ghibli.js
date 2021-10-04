@@ -8,8 +8,7 @@ export default {
     { id: 'Lady-Eboshi', image: 'https://imgur.com/a/E1M3k8S', bgColor: '#54C0EE' },
     { id: 'Ashitaka-and-Yakul', image: 'https://imgur.com/a/YrZghZY', bgColor: '#54C0EE' },
   ],
-
-  name: 'Totoro',
+  /*name: 'Totoro',
   items: [
     { id: 'Totoro-blue-white', image: 'https://imgur.com/IKhWmfc', bgColor: '#F1E7B4' },
     { id: 'Gato-bus', image: 'https://imgur.com/kRrOus2', bgColor: 'CEE#F1E7B4' },
@@ -27,5 +26,5 @@ export default {
     { id: 'Nabo', image: 'https://imgur.com/2jqtWEK', bgColor: '#2EA497' },
     { id: 'Sophie', image: 'https://imgur.com/wXss1qv', bgColor: '#2EA497' },
     { id: 'Marco', image: 'https://imgur.com/08w3L4E', bgColor: '#2EA497' },
-  ]
+  ]*/
 };
