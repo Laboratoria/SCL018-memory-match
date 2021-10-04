@@ -14,6 +14,8 @@
 //   .catch(console.error);
 //
 import Mononoke from '../data/Ghibli/Ghibli.js';
+import shuffle from '../shuffle/shuffle.js';
+
 console.log(Mononoke);
 const App = () => {
   const el = document.createElement('div');
@@ -23,5 +25,14 @@ const App = () => {
 
   return el;
 };
+
+let array=[];
+for (let index = 0; index <Mononoke.items.length; index++) {
+array.push(Mononoke.items[index]);
+
+}
+console.log(array);
+const shuffleCards = shuffle(array);
+
 
 export default App;
