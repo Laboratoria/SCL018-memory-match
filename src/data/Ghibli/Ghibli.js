@@ -8,6 +8,7 @@ export default {
     { id: 'Lady-Eboshi', image: 'https://imgur.com/a/E1M3k8S', bgColor: '#54C0EE' },
     { id: 'Ashitaka-and-Yakul', image: 'https://imgur.com/a/YrZghZY', bgColor: '#54C0EE' },
   ],
+
   /*name: 'Totoro',
   items: [
     { id: 'Totoro-blue-white', image: 'https://imgur.com/IKhWmfc', bgColor: '#F1E7B4' },
