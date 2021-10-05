@@ -23,7 +23,13 @@ const App = () => {
   el.className = 'App';
   el.textContent = '';
 
+  let dobleArray= Mononoke.items.concat(Mononoke.items);
+  const shuffleCards = shuffle(dobleArray);
+  console.log(shuffleCards);
+
+
   return el;
+
 };
 
 let array=[];
@@ -32,7 +38,6 @@ array.push(Mononoke.items[index]);
 
 }
 console.log(array);
-const shuffleCards = shuffle(array);
 
 
 export default App;
