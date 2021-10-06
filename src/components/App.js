@@ -28,12 +28,18 @@ Fragmentos de código: document.createDocumentFragment()*/
 import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js
 import shuffle from '../shuffle/shuffle.js';// Importar función shuffle
 
-console.log(Mononoke);
 const App = () => { 
   const el = document.createElement('div');
 
   el.className = 'App';
   el.textContent = '';
+
+//Colocar la data dentro de un array
+  let showData=[];
+  for (let index = 0; index <Mononoke.items.length; index++) {
+  showData.push(Mononoke.items[index]);
+  }
+console.log(showData);
 
   //Duplicar cada item de la data y randomizarlos
   let dobleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
@@ -47,12 +53,7 @@ const App = () => {
 
 };
 
-let array=[];
-for (let index = 0; index <Mononoke.items.length; index++) {
-array.push(Mononoke.items[index]);
 
-}
-console.log(array);
 
 
 export default App;
