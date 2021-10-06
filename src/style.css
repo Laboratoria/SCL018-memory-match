@@ -1,8 +1,3 @@
-body {
-    background-image: url(../fondoprincesa.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-}
 
 .mononoke-logo{
     display: flex;
@@ -42,4 +37,11 @@ margin-right: 30px;
     border-radius: 10px;
     width:250px;
     justify-content: center;
+}
+
+#root{
+    background-color: aquamarine;
+    width: 100%;
+    height: auto;
+
 }
