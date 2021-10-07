@@ -25,7 +25,8 @@ Añadir un elemento al DOM: parent.appendChild(element)
 
 Fragmentos de código: document.createDocumentFragment()*/
 
-import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js
+/*import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js*/
+import Castillo from '../data/Castillo/castillo.js';
 import shuffle from '../shuffle/shuffle.js';// Importar función shuffle
 
 const App = () => { 
@@ -34,26 +35,41 @@ const App = () => {
   el.className = 'App';
   el.textContent = '';
 
-//Colocar la data dentro de un array
-  let showData=[];
-  for (let index = 0; index <Mononoke.items.length; index++) {
-  showData.push(Mononoke.items[index]);
-  }
-console.log(showData);
+  const cardsBox = document.createElement('div');
+  cardsBox.className = 'cardsBox';
+  el.appendChild(cardsBox);
 
   //Duplicar cada item de la data y randomizarlos
-  let dobleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
-  const shuffleCards = shuffle(dobleArray);
+  let doubleArray= Castillo.items.concat(Castillo.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
+  const shuffleCards = shuffle(doubleArray);
   console.log(shuffleCards);
-  
-  
-  
+
+//Recorro los elementos del array y los encierro en un div
+  for(let i = 0; i < shuffleCards.length; i++){
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.id = shuffleCards[i].id;
+    cardsBox.appendChild(card);
+    
+//Encierro las imagenes en el div anterior
+    let frontCard = document.createElement("img");
+    frontCard.id = shuffleCards[i].id;
+    imfrontCard.src = shuffleCards[i].age;
+    frontCard.className = 'frontCard';
+    card.appendChild(frontCard);
+ 
+}
 
   return el;
 
 };
 
 
-
+/*el.innerHTML += `
+<div class='memoryCard' id='memoryCard'> 
+  <img class="fotos" src="${shuffleCards[i].image}">
+  <div class='descripcion'>
+  <p class='nombres'>${shuffleCards[i].id}</p><br>
+  </div>`;*/
 
 export default App;
