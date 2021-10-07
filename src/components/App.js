@@ -73,16 +73,34 @@ const App = () => {
     const card = document.createElement('div');
     card.className = 'card';        
     card.id = shuffleCards[i].id;
-    grid.appendChild(card);
+    
     
 //Encierro las imagenes en el div anterior
     let frontCard = document.createElement("img");
-    /*frontCard.id = shuffleCards[i].id;*/
     frontCard.src = shuffleCards[i].image;
     frontCard.className = 'frontCard';
     card.appendChild(frontCard);
- 
+    
+    let backCard = document.createElement("img");
+    backCard.src = './img/kodamabg.png';
+    backCard.className = 'backCard';
+    card.appendChild(backCard);
+
+    grid.appendChild(card);
 }
+
+/*function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
+
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+
+    return;
+  }*/
 
   return el;
 
