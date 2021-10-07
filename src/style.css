@@ -1,49 +1,5 @@
-
-.mononoke-logo{
-    display: flex;
-    justify-content: center;
-}
-
-.logo{
-    width: 20%;
-}
-
-.main-container{
-display: grid;
-grid-template-columns: 3fr 1fr;
-column-gap: 30px;
-margin-top: 30px;
-margin-left: 20px;
-margin-right: 30px;
-
-}
-
-.container-box{
-    background: rgba(50, 224, 214, 0.23);
-    border-radius: 25px;
-    height: 500px;
-    
-}
-
-.side-box{
-    background: rgba(50, 224, 214, 0.23);
-    border-radius: 25px;
-    height: 500px;
-    
-}
-
-.score{
-    background: rgba(196, 196, 196, 0.5);
-    border-radius: 10px;
-    width:250px;
-    justify-content: center;
-}
-
-#root{
-    background-color: aquamarine;
-    width: 100%;
-    height: 100%;
-
+body {
+    margin: 0;
 }
 /*.cardsBox {
     display: grid;
@@ -51,12 +7,57 @@ margin-right: 30px;
     grid-template-columns: auto auto auto auto;
 
 }*/
+.grid {
+    width: 640px;
+    height: 500px;
+    display: grid;
+    flex-wrap: wrap;
+    margin: auto;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 25px;
+    background: rgba(50, 224, 214, 0.23);
+    
+}
+
 .card {
     width: 100px;
     height: 120px;
-    
+    border: 2px solid;
+    border-radius: 10px;
+    margin: auto; 
 }
+
 .frontCard {
-    
-    
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.mononokeBg{
+    background-image: url('./img/fondoprincesa.png');
+    background-repeat: no-repeat;
+    display: grid;
+    flex-wrap: wrap;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.logo {
+    height: 80px;
+    width: 400px;
+    margin-top: 20px;
+
+}
+.scoreBox{
+    background: rgba(50, 224, 214, 0.23);
+    border-radius: 25px;
+    height: 500px;
+    width: 300px;
 }
