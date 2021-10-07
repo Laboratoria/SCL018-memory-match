@@ -1,12 +1,12 @@
 export default {
   name: 'Mononoke',
   items: [
-    { id: 'Spirit', image: 'https://i.imgur.com/EWOw4N3.png', bgColor: '#54C0EE' },
-    { id: 'Ashitaka', image: 'https://i.imgur.com/paDNp8S.png', bgColor: '#54C0EE' },
-    { id: 'San-and-Wolf', image: 'https://i.imgur.com/De8EcXq.png', bgColor: '#54C0EE' },
-    { id: 'San-with-Spear', image: 'https://i.imgur.com/GBm5d54.png', bgColor: '#54C0EE' },
-    { id: 'Lady-Eboshi', image: 'https://i.imgur.com/dMPYBEG.png', bgColor: '#54C0EE' },
-    { id: 'Ashitaka-and-Yakul', image: 'https://i.imgur.com/53ZdB7A.png', bgColor: '#54C0EE' },
+    { id: 'Spirit-form', image: 'https://i.imgur.com/ak5L8Cy.png', bgColor: '#54C0EE' },
+    { id: 'Ashitaka', image: 'https://i.imgur.com/1bro6UI.png', bgColor: '#54C0EE' },
+    { id: 'San-and-Wolf', image: 'https://i.imgur.com/DFk5bIk.png', bgColor: '#54C0EE' },
+    { id: 'San-Blood', image: 'https://i.imgur.com/zrBgml0.png', bgColor: '#54C0EE' },
+    { id: 'Spirit', image: 'https://i.imgur.com/EOvZm4q.png', bgColor: '#54C0EE' },
+    { id: 'Ashitaka-and-Yakul', image: 'https://i.imgur.com/LCbBOWs.png', bgColor: '#54C0EE' },
   ],
 
   /*name: 'Totoro',
