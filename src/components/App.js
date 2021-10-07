@@ -25,8 +25,7 @@ Añadir un elemento al DOM: parent.appendChild(element)
 
 Fragmentos de código: document.createDocumentFragment()*/
 
-/*import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js*/
-import Castillo from '../data/Castillo/castillo.js';
+import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js*/
 import shuffle from '../shuffle/shuffle.js';// Importar función shuffle
 
 const App = () => { 
@@ -35,26 +34,51 @@ const App = () => {
   el.className = 'App';
   el.textContent = '';
 
+  const displayMononoke = document.createElement('div');
+  displayMononoke.className = 'mononokeBg';
+  el.appendChild(displayMononoke);
+
+  
+// header del juego 
+  const header = document.createElement ('div');
+  header.className= 'header'
+  displayMononoke.appendChild(header);
+
+  const logoHeader = document.createElement('img');
+  logoHeader.className = 'logo';
+  logoHeader.src = './img/logoprincesa.png';
+  header.appendChild(logoHeader);
+
+  //contenedor de las cartas
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
-  el.appendChild(cardsBox);
+  displayMononoke.appendChild(cardsBox);
 
-  //Duplicar cada item de la data y randomizarlos
-  let doubleArray= Castillo.items.concat(Castillo.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
+  //Cuadrícula para distribuir las cartas 
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+  cardsBox.appendChild(grid);
+
+//Cuadrícula para mostrar puntaje 
+  const scoreBox = document.createElement('div');
+  scoreBox.className = 'scoreBox';
+  displayMononoke.appendChild(scoreBox);
+
+//Duplicar cada item de la data y randomizarlos
+  let doubleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
   const shuffleCards = shuffle(doubleArray);
-  console.log(shuffleCards);
 
 //Recorro los elementos del array y los encierro en un div
   for(let i = 0; i < shuffleCards.length; i++){
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = 'card';        
     card.id = shuffleCards[i].id;
-    cardsBox.appendChild(card);
+    grid.appendChild(card);
     
 //Encierro las imagenes en el div anterior
     let frontCard = document.createElement("img");
-    frontCard.id = shuffleCards[i].id;
-    imfrontCard.src = shuffleCards[i].age;
+    /*frontCard.id = shuffleCards[i].id;*/
+    frontCard.src = shuffleCards[i].image;
     frontCard.className = 'frontCard';
     card.appendChild(frontCard);
  
@@ -63,13 +87,4 @@ const App = () => {
   return el;
 
 };
-
-
-/*el.innerHTML += `
-<div class='memoryCard' id='memoryCard'> 
-  <img class="fotos" src="${shuffleCards[i].image}">
-  <div class='descripcion'>
-  <p class='nombres'>${shuffleCards[i].id}</p><br>
-  </div>`;*/
-
 export default App;
