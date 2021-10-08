@@ -19,6 +19,13 @@ body {
   background: rgba(50, 224, 214, 0.23);
 
 }
+.cardContiner {
+  width: 100px;
+  height: 120px;
+  border: 3px #354BA1;
+  perspective: 1000px; 
+  margin: auto; 
+}
 
 .card {
   width: 100px;
@@ -28,7 +35,12 @@ body {
   margin: auto;
   display: flex;
   position: relative;
-  animation: initial 5s;
+  /*animation: initial 5s;*/
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.cardContiner:hover .card {
+  transform: rotateY(180deg);
 }
 
 .frontCard {
@@ -37,6 +49,8 @@ body {
   position: absolute;
   justify-content: center;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 .backCard {
@@ -45,6 +59,7 @@ body {
     position:absolute;
     justify-content: center;
     backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .mononokeBg {
   background-image: url('./img/fondoprincesa.png');

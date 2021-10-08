@@ -54,15 +54,15 @@ const App = () => {
   cardsBox.className = 'cardsBox';
   displayMononoke.appendChild(cardsBox);
 
+  //Cuadrícula para mostrar puntaje 
+  const scoreBox = document.createElement('div');
+  scoreBox.className = 'scoreBox';
+  displayMononoke.appendChild(scoreBox);
+
   //Cuadrícula para distribuir las cartas 
   const grid = document.createElement('div');
   grid.className = 'grid';
   cardsBox.appendChild(grid);
-
-//Cuadrícula para mostrar puntaje 
-  const scoreBox = document.createElement('div');
-  scoreBox.className = 'scoreBox';
-  displayMononoke.appendChild(scoreBox);
 
 //Duplicar cada item de la data y randomizarlos
   let doubleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
@@ -73,7 +73,6 @@ const App = () => {
     const card = document.createElement('div');
     card.className = 'card';        
     card.id = shuffleCards[i].id;
-    
     
 //Encierro las imagenes en el div anterior
     let frontCard = document.createElement("img");
@@ -86,7 +85,12 @@ const App = () => {
     backCard.className = 'backCard';
     card.appendChild(backCard);
 
-    grid.appendChild(card);
+//Crear contenedor para card.
+    const cardContiner = document.createElement('div');
+    cardContiner.className = 'cardContiner';
+    grid.appendChild(cardContiner);
+
+    cardContiner.appendChild(card);
 }
 
 /*function flipCard() {
