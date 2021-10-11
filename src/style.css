@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
 }
@@ -122,11 +123,25 @@ body {
 }
 
 .btn-intro {
-  position: absolute;
-width:138px;
-height:45px;
-left:551px;
-top:901px;
+  display:flex;
+  position: relative;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 50px;
+  color: #ffffff;
+  background-color: #52d3e0;
+  outline:none;
+  border:none;
+  margin:0 auto;
+  margin-top:3px;
+  margin-bottom:3px;
+}
+
+.btn-intro:hover{
+  color: #ffffff;
+  background-color: #86e5ee;
+  box-shadow: 0 4px 16px rgb(119, 219, 236);
+  transition: all 0.2s ease;
 }
 
 
