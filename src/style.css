@@ -1,7 +1,21 @@
+@font-face {
+  font-family: 'Ghibli Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Ghibli Bold'), url('./src/Al-Samman - Ghibli-Bold.woff') format('woff');
+  }
 
-body {
-  margin: 0;
-}
+  @font-face {
+    font-family: 'Ghibli Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
+    }
+    
+    html, body {
+      height:100%;
+  } 
+
 
 /*.cardsBox {
     display: grid;
@@ -9,6 +23,11 @@ body {
     grid-template-columns: auto auto auto auto;
 
 }*/
+.App{
+  height: 100%;
+  width: 100%;
+}
+
 /*css de gameplay*/
 .grid {
   width: 640px;
@@ -22,7 +41,7 @@ body {
 
 }
 
-.cardContiner {
+.cardContainer {
   width: 100px;
   height: 120px;
   border: 3px #354BA1;
@@ -43,7 +62,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.cardContiner:hover .card {
+.cardContainer:hover.card {
   transform: rotateY(180deg);
 }
 
@@ -69,11 +88,14 @@ body {
 }
 
 .mononokeBg {
-  background-image: url('./img/fondoprincesa.png');
-  background-repeat: no-repeat;
-  display: grid;
-  flex-wrap: wrap;
-  width: auto;
+  background-image:url('./img/fondoprincesa.png');
+  background-repeat:no-repeat;
+  background-size:auto;
+  position:relative;
+  display:grid;
+  flex-wrap:wrap;
+  height: 100%;
+  width: 100%;
 }
 
 .header {
@@ -125,6 +147,7 @@ body {
 .btn-intro {
   display:flex;
   position: relative;
+  font-family: 'Ghibli Regular';
   padding: 5px;
   font-weight: 600;
   font-size: 50px;
