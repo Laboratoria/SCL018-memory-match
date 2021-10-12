@@ -90,6 +90,14 @@ const App = () => {
     cardContainer.className = 'cardContainer';
     grid.appendChild(cardContainer);
 
+//Hacer flip
+  function flipCard () {
+  card.classList.toggle("flipCard");
+}
+    card.addEventListener("click", flipCard);
+
+ 
+
     cardContainer.appendChild(card);
 }
 
