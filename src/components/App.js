@@ -86,11 +86,11 @@ const App = () => {
     card.appendChild(backCard);
 
 //Crear contenedor para card.
-    const cardContiner = document.createElement('div');
-    cardContiner.className = 'cardContiner';
-    grid.appendChild(cardContiner);
+    const cardContainer = document.createElement('div');
+    cardContainer.className = 'cardContainer';
+    grid.appendChild(cardContainer);
 
-    cardContiner.appendChild(card);
+    cardContainer.appendChild(card);
 }
 
 /*function flipCard() {
