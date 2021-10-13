@@ -46,10 +46,14 @@
     grid-column-end: 2;
   }
   .totoro{
-  grid-column-start: 3;
+    grid-column-start: 3;
     grid-column-end: 3;
     
   }
+    html, body {
+      height:100%;
+      margin: 0;
+  } 
 
 
 /*.cardsBox {
@@ -98,9 +102,9 @@
   transform-style: preserve-3d;
 }
 
-.cardContainer:hover.card {
+/*.cardContainer:hover.card {
   transform: rotateY(180deg);
-}
+}*/
 
 .frontCard {
   height: 100%;
@@ -213,6 +217,9 @@
   background-color: #86e5ee;
   box-shadow: 0 4px 16px rgb(119, 219, 236);
   transition: all 0.2s ease;
+}
+.flipCard {
+  transform: rotateY(180deg);
 }
 
 
