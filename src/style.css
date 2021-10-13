@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Ghibli Bold';
+  font-family:'Ghibli Bold';
   font-style: normal;
   font-weight: normal;
   src: local('Ghibli Bold'), url('./src/Al-Samman - Ghibli-Bold.woff') format('woff');
@@ -11,43 +11,124 @@
     font-weight: normal;
     src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
     }
-    
+
+/* Estilo  de la intro*/
+.logo-ghibli {
+  position: absolute;
+  width: 140px;
+  height: 59px;
+  margin-left: 68px;
+  margin-top: 49px;
+}
+
+.intro {
+  background-image: radial-gradient(circle at 15.93% 1.35%, #78d2b2 0, #70d3b9 10%, #68d3c1 20%, #60d3c9 30%, #5ad3d1 40%, #55d3d8 50%, #52d3df 60%, #52d2e6 70%, #54d1ec 80%, #59d0f1 90%, #60cef6 100%);
+  height: 630px;
+}
+
+.img-intro {
+  position:relative;
+  width: 420px;
+  height: 520px;
+  display:block;
+  margin:auto;
+  padding: 20px;
+  justify-content: center;
+
+}
+
+.btn-intro {
+  display:flex;
+  position: relative;
+  font-family: 'Ghibli Regular';
+  padding: 5px;
+  font-weight: 600;
+  font-size: 45px;
+  color: #ffffff;
+  background-color: #52d3e0;
+  outline:none;
+  border:none;
+  margin:0 auto;
+  margin-top: none;
+  margin-bottom:10px;
+  justify-content: center;
+}
+
+.btn-intro:hover{
+  color: #ffffff;
+  background-color: #86e5ee;
+  box-shadow: 0 4px 16px rgb(119, 219, 236);
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+/* estilo  de las categorías*/
+.logo-juego{
+  margin-top: 30px;
+  margin-left:350px;
+}
+.instructions {
+  font-family:'Ghibli Regular';
+  font-size: 25px;
+  text-align: center;
+  margin-top: 1px;
+}
 
   .desk-container{
-    display:grid;
+    /*display:grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 200px 400px;
     height: 832px;
     flex-wrap: wrap;
-    margin: auto;
-    background-image: url('./img/bgDeskScreen.jpg');
+    margin: auto;*/
 
+    background-image: url('./img/Propuesta.png');
+    column-gap: 100px;
+    row-gap: 100px;
+    align-items: center;
+    display: grid;
+    grid-template-columns:repeat;
+    position: relative;
+    height: 630px;
   }
+
   .desk img{
-    grid-row-start: 2;
+    /*grid-row-start: 2;
     grid-row-end: 2;
-    display: flex;
-    justify-content: center;
-    width: 448px;
-    height: 288px;
+    display:grid;
+    width: 348px;
+    height: 188px;
     border: 3px solid #000000;
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
+    margin:auto;*/
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    border: 3px solid #000000;
+  
 
   }
+
   .mononoke{
-    grid-column-start: 1;
-    grid-column-end: 1;
+   margin-left: 100px;
+   margin-bottom: 250px;
+    
 
   }
   .howl{
-    grid-column-start: 2;
-    grid-column-end: 2;
+    margin-left: 50px;
+    margin-bottom: 250px;
+   
   }
   .totoro{
-    grid-column-start: 3;
-    grid-column-end: 3;
+    margin-left:50px;
+    margin-bottom: 250px;
+
     
   }
     html, body {
@@ -77,8 +158,6 @@
   grid-template-columns: auto auto auto auto;
   border-radius: 25px;
   background: rgba(50, 224, 214, 0.23);
-
-
 }
 
 .cardContainer {
@@ -97,7 +176,6 @@
   margin: auto;
   display: flex;
   position: relative;
-  /*animation: initial 5s;*/
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -153,7 +231,6 @@
   height: 80px;
   width: 400px;
   margin-top: 20px;
-
 }
 
 .scoreBox {
@@ -165,59 +242,8 @@
   margin-right: 30px;
   margin-bottom:50px;
   margin-top: none;
-  
- 
-
 }
 
-/* estilo  de la intro*/
-.logo-ghibli {
-  position: absolute;
-  width: 180px;
-  height: 79px;
-  margin-left: 68px;
-  margin-top: 49px;
-}
-
-.intro {
-  background-image: radial-gradient(circle at 15.93% 1.35%, #78d2b2 0, #70d3b9 10%, #68d3c1 20%, #60d3c9 30%, #5ad3d1 40%, #55d3d8 50%, #52d3df 60%, #52d2e6 70%, #54d1ec 80%, #59d0f1 90%, #60cef6 100%);
-  height: 832px;
-}
-
-.img-intro {
-  position:relative;
-  width: 550px;
-  height: 713px;
-  display:block;
-  margin:auto;
-  padding: 20px;
-  justify-content: center;
-
-}
-
-.btn-intro {
-  display:flex;
-  position: relative;
-  font-family: 'Ghibli Regular';
-  padding: 5px;
-  font-weight: 600;
-  font-size: 50px;
-  color: #ffffff;
-  background-color: #52d3e0;
-  outline:none;
-  border:none;
-  margin:0 auto;
-  margin-top: none;
-  margin-bottom:10px;
-  justify-content: center;
-}
-
-.btn-intro:hover{
-  color: #ffffff;
-  background-color: #86e5ee;
-  box-shadow: 0 4px 16px rgb(119, 219, 236);
-  transition: all 0.2s ease;
-}
 .flipCard {
   transform: rotateY(180deg);
 }
