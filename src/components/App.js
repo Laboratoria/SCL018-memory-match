@@ -68,6 +68,9 @@ const App = () => {
   let doubleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
   const shuffleCards = shuffle(doubleArray);
 
+//Declaro variables a utilizar
+  let clickCard = [];
+
 //Recorro los elementos del array y los encierro en un div
   for(let i = 0; i < shuffleCards.length; i++){
     const card = document.createElement('div');
@@ -85,16 +88,28 @@ const App = () => {
     backCard.className = 'backCard';
     card.appendChild(backCard);
 
+    //Hacer flip a 2 cartas.
+  const flipCard = () => {
+    if(clickCard.length < 2) {
+      clickCard.push(card.id);
+    card.classList.toggle("flipCard");
+}}
+    card.addEventListener("click", flipCard);
+
+    /*//Hacer match
+    const matchCards = () => {
+      if(clickCard[0].id === clickCard[1].id){
+    alert('hicieron match');
+    }
+    else{
+    alert('No hicieron match');
+    }}*/
 //Crear contenedor para card.
     const cardContainer = document.createElement('div');
     cardContainer.className = 'cardContainer';
     grid.appendChild(cardContainer);
 
-//Hacer flip
-  function flipCard () {
-  card.classList.toggle("flipCard");
-}
-    card.addEventListener("click", flipCard);
+
 
  
 
