@@ -1,32 +1,12 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+/*Aquí podríamos dejar todos los elementos creados que se muestran en el DOM
+-Pantalla de juego en sí con:
+  -Sector cartas
+  -Sector puntaje y botones Menú principal y jugar otra vez(reiniciar juego)*/
 
-//Qué parte del código vamos a escribir aquí?
-/*
-DOM - Crear e insertar elementos
-Crear un elemento: document.createElement(element)
-Escribir texto en un elemento: element.textContent = texto
-Escribir HTML en un elemento: element.innerHTML = código HTML
 
-Añadir un elemento al DOM: parent.appendChild(element)
-
-Fragmentos de código: document.createDocumentFragment()*/
-
-import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js*/
-import shuffle from '../shuffle/shuffle.js';// Importar función shuffle
+import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
+import shuffle from '../shuffle/shuffle.js';// Importar función shuffle (a gamePlay?)
+import matchCards from './Match.js';
 
 const App = () => { 
   const el = document.createElement('div');
@@ -44,17 +24,18 @@ const App = () => {
   header.className= 'header'
   displayMononoke.appendChild(header);
 
+  //Esto debería quedar general (para hacer los temas según la elección de mazo)
   const logoHeader = document.createElement('img');
   logoHeader.className = 'logo';
   logoHeader.src = './img/logoprincesa.png';
   header.appendChild(logoHeader);
 
-  //contenedor de las cartas
+  //contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
   displayMononoke.appendChild(cardsBox);
 
-  //Cuadrícula para mostrar puntaje 
+  //Cuadrícula para mostrar puntaje (general)
   const scoreBox = document.createElement('div');
   scoreBox.className = 'scoreBox';
   displayMononoke.appendChild(scoreBox);
@@ -64,7 +45,7 @@ const App = () => {
   grid.className = 'grid';
   cardsBox.appendChild(grid);
 
-//Duplicar cada item de la data y randomizarlos
+//Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
   let doubleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
   const shuffleCards = shuffle(doubleArray);
 
@@ -83,27 +64,25 @@ const App = () => {
     frontCard.className = 'frontCard';
     card.appendChild(frontCard);
     
-    let backCard = document.createElement("img");
+    let backCard = document.createElement("img"); //En el tema mononoke
     backCard.src = './img/kodamabg.png';
     backCard.className = 'backCard';
     card.appendChild(backCard);
 
-    //Hacer flip a 2 cartas.
+    //Hacer flip a 2 cartas. (Esto podría ir en gamePlay?)
   const flipCard = () => {
     if(clickCard.length < 2) {
-      clickCard.push(card.id);
+      for(let i = 0; i < clickCard.length; i++){
+      clickCard.push(clickCard[i]);
+      console.log(clickCard);
+      }
     card.classList.toggle("flipCard");
+    const match = matchCards(clickCard);
 }}
     card.addEventListener("click", flipCard);
+    
+    
 
-    /*//Hacer match
-    const matchCards = () => {
-      if(clickCard[0].id === clickCard[1].id){
-    alert('hicieron match');
-    }
-    else{
-    alert('No hicieron match');
-    }}*/
 //Crear contenedor para card.
     const cardContainer = document.createElement('div');
     cardContainer.className = 'cardContainer';
