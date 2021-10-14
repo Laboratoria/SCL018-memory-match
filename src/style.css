@@ -74,7 +74,7 @@
   margin-top: 1px;
 }
 
-  .desk-container{
+  .deck-container{
     /*display:grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 200px 400px;
@@ -92,7 +92,7 @@
     height: 630px;
   }
 
-  .desk img{
+  .deck img{
     /*grid-row-start: 2;
     grid-row-end: 2;
     display:grid;
