@@ -57,6 +57,7 @@ const App = () => {
     const card = document.createElement('div');
     card.className = 'card';        
     card.id = shuffleCards[i].id;
+    card.name= shuffleCards.classname;
     
 //Encierro las imagenes en el div anterior
     let frontCard = document.createElement("img");
@@ -70,14 +71,15 @@ const App = () => {
     card.appendChild(backCard);
 
     //Hacer flip a 2 cartas. (Esto podría ir en gamePlay?)
-  const flipCard = () => {
-    if(clickCard.length < 2) {
-      for(let i = 0; i < clickCard.length; i++){
-      clickCard.push(clickCard[i]);
-      console.log(clickCard);
-      }
-    card.classList.toggle("flipCard");
-    const match = matchCards(clickCard);
+    const flipCard = () => {
+      if(clickCard.length < 2) {
+        clickCard.push(card.id);
+      card.classList.toggle("flipCard");
+
+        setTimeout(() => {
+          const matchC = matchCards(clickCard);
+        }, 1000);
+      
 }}
     card.addEventListener("click", flipCard);
     
