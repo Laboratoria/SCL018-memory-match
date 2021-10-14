@@ -12,6 +12,9 @@
     src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
     }
 
+    
+:link, :visited { cursor: url(./img/cursor.svg), url(./img/cursor.cur), pointer }
+
 /* Estilo  de la intro*/
 .logo-ghibli {
   position: absolute;
@@ -52,6 +55,7 @@
   margin-top: none;
   margin-bottom:10px;
   justify-content: center;
+  cursor: url('./img/cursor.svg'), url('./img/cursor.cur'), auto;	
 }
 
 .btn-intro:hover{
