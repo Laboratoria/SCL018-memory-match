@@ -1,12 +1,12 @@
 export default {
   name: 'Mononoke',
   items: [
-    { id: 'Spirit-form', image: 'https://i.imgur.com/ak5L8Cy.png', bgColor: '#54C0EE' },
-    { id: 'Ashitaka', image: 'https://i.imgur.com/1bro6UI.png', bgColor: '#54C0EE' },
-    { id: 'San-Spear', image: 'https://i.imgur.com/GBm5d54.png', bgColor: '#54C0EE' },
-    { id: 'San-Blood', image: 'https://i.imgur.com/zrBgml0.png', bgColor: '#54C0EE' },
-    { id: 'Spirit', image: 'https://i.imgur.com/EOvZm4q.png', bgColor: '#54C0EE' },
-    { id: 'Ashitaka-and-Yakul', image: 'https://i.imgur.com/LCbBOWs.png', bgColor: '#54C0EE' },
+    { id: 'Spirit-form', classname: 'spiritForm', image: 'https://i.imgur.com/ak5L8Cy.png', bgColor: '#54C0EE' },
+    { id: 'Ashitaka',classname: 'ashitaka', image: 'https://i.imgur.com/1bro6UI.png', bgColor: '#54C0EE' },
+    { id: 'San-Spear',classname: 'sanSpear', image: 'https://i.imgur.com/GBm5d54.png', bgColor: '#54C0EE' },
+    { id: 'San-Blood',classname: 'sanBlood', image: 'https://i.imgur.com/zrBgml0.png', bgColor: '#54C0EE' },
+    { id: 'Spirit',classname: 'spirit' , image: 'https://i.imgur.com/EOvZm4q.png', bgColor: '#54C0EE' },
+    { id: 'Ashitaka-and-Yakul',classname: 'ashitakaAndYakul', image: 'https://i.imgur.com/LCbBOWs.png', bgColor: '#54C0EE' },
   ],
 
   /*name: 'Totoro',
