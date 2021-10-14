@@ -9,10 +9,10 @@
 
 
 const matchCards = (array) => {
-  let matchPos = [];
+  //let matchPos = [];
     for(let i = 0; i < array.length; i++){
     if (array.length == 2 && array[0] == array[1]) {
-      matchPos.push(array[i]);
+      //matchPos.push(array[i]);
       console.log(matchPos);
       alert('hicieron match');
       /*score += 100;
