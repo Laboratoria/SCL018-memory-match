@@ -182,7 +182,7 @@
   position: relative;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-animation: gameStart 3s;
+  animation: gameStart 3s;
 }
 /*.cardContainer:hover.card {
   transform: rotateY(180deg);
