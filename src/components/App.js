@@ -45,6 +45,10 @@ const App = () => {
   grid.className = 'grid';
   cardsBox.appendChild(grid);
 
+  //document.getElementById("btn-intro").addEventListener("click",displayMononoke);
+
+  //funciones y variables para comienzo del juego
+
 //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
   let doubleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
   const shuffleCards = shuffle(doubleArray);
