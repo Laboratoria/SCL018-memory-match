@@ -6,7 +6,7 @@
 
 import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
 import shuffle from '../shuffle/shuffle.js';// Importar función shuffle (a gamePlay?)
-import matchCards from './Match.js';
+//import matchCards from './Match.js';
 
 const App = () => { 
   const el = document.createElement('div');
@@ -78,17 +78,38 @@ const App = () => {
     const flipCard = () => {
       if(clickCard.length < 2) {
         clickCard.push(card.id);
-      card.classList.toggle("flipCard");
+        card.classList.toggle("flipCard");
 
         setTimeout(() => {
-          const matchC = matchCards(clickCard);
+           matchCards(clickCard);
         }, 1000);
       
 }}
-    card.addEventListener("click", flipCard);
-    
     
 
+    const matchCards = (array) => {
+      let matchPos = [];
+        for(let i = 0; i < array.length; i++){
+        if (array.length == 2 && array[0] == array[1]) {
+          matchPos.push(array);
+          alert('hicieron match');
+          /*score += 100;
+          numberScore.innerHTML = score;
+          if (score == 900) {
+            textScore.innerHTML = "Congrats! You've caught them all!"*/
+    
+          /*array[0].matched = true;
+          array[1].matched = true;*/
+          array.length = 0;
+        } else /*if(array.length == 2 && array[0] !== array[1])*/{
+          array.forEach(card.classList.remove('flipCard'));
+          //card.classList.remove('flipCard');
+          //alert('no hicieron match');
+          //array.style.transform= "rotateY(180deg)";
+          array.length = 0;
+        }}}; 
+    
+        card.addEventListener("click", flipCard);
 //Crear contenedor para card.
     const cardContainer = document.createElement('div');
     cardContainer.className = 'cardContainer';
