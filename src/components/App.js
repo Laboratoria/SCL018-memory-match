@@ -4,11 +4,11 @@
   -Sector puntaje y botones Menú principal y jugar otra vez(reiniciar juego)*/
 
 
-import Mononoke from '../data/Ghibli/Ghibli.js';// Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
-import shuffle from '../shuffle/shuffle.js';// Importar función shuffle (a gamePlay?)
-//import matchCards from './Match.js';
+import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
+import shuffle from './shuffle.js'; // Importar función shuffle (a gamePlay?)
+import matchCards from './Match.js'; //Importar función match.
 
-const App = () => { 
+const App = () => {
   const el = document.createElement('div');
 
   el.className = 'App';
@@ -18,10 +18,10 @@ const App = () => {
   displayMononoke.className = 'mononokeBg';
   el.appendChild(displayMononoke);
 
-  
-// header del juego 
-  const header = document.createElement ('div');
-  header.className= 'header'
+
+  // header del juego 
+  const header = document.createElement('div');
+  header.className = 'header'
   displayMononoke.appendChild(header);
 
   //Esto debería quedar general (para hacer los temas según la elección de mazo)
@@ -45,25 +45,30 @@ const App = () => {
   grid.className = 'grid';
   cardsBox.appendChild(grid);
 
-//Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
-  let doubleArray= Mononoke.items.concat(Mononoke.items);// Declara variable que dobla los items de Mononoke de Ghibli.js
+  //document.getElementById("btn-intro").addEventListener("click",displayMononoke);
+
+  //funciones y variables para comienzo del juego
+
+  //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
+  let doubleArray = Mononoke.items.concat(Mononoke.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
   const shuffleCards = shuffle(doubleArray);
 
-//Declaro variables a utilizar
+  //Declaro variables a utilizar
   let clickCard = [];
 
-//Recorro los elementos del array y los encierro en un div
-  for(let i = 0; i < shuffleCards.length; i++){
+  //Recorro los elementos del array y los encierro en un div
+  for (let i = 0; i < shuffleCards.length; i++) {
     const card = document.createElement('div');
-    card.className = 'card';        
+    card.className = 'card';
     card.id = shuffleCards[i].id;
-    
-//Encierro las imagenes en el div anterior
+    grid.appendChild(card);
+
+    //Encierro las imagenes en el div anterior
     let frontCard = document.createElement("img");
     frontCard.src = shuffleCards[i].image;
     frontCard.className = 'frontCard';
     card.appendChild(frontCard);
-    
+
     let backCard = document.createElement("img"); //En el tema mononoke
     backCard.src = './img/kodamabg.png';
     backCard.className = 'backCard';
@@ -71,47 +76,19 @@ const App = () => {
 
     //Hacer flip a 2 cartas. (Esto podría ir en gamePlay?)
     const flipCard = () => {
-      if(clickCard.length < 2) {
+      if (clickCard.length < 2) {
         clickCard.push(card.id);
+
         card.classList.toggle("flipCard");
 
         setTimeout(() => {
-           matchCards(clickCard);
+          matchCards(clickCard);
         }, 1000);
-      
-}}
+
+      }
+    }
     card.addEventListener("click", flipCard);
-
-    const matchCards = (array) => {
-      let matchPos = [];
-        for(let i = 0; i < array.length; i++){
-        if (array.length == 2 && array[0] == array[1]) {
-          matchPos.push(array);
-          alert('hicieron match');
-          /*score += 100;
-          numberScore.innerHTML = score;
-          if (score == 900) {
-            textScore.innerHTML = "Congrats! You've caught them all!"*/
-          array.length = 0;
-        } else {
-          document.querySelectorAll(".flipCard").forEach(element => {
-            element.classList.remove("flipCard");
-          });
-          array.length = 0;
-    }}}; 
-    
-
-//Crear contenedor para card.
-    const cardContainer = document.createElement('div');
-    cardContainer.className = 'cardContainer';
-    grid.appendChild(cardContainer);
-
-
-
- 
-
-    cardContainer.appendChild(card);
-}
+  }
 
   return el;
 
