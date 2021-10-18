@@ -6,12 +6,12 @@
 -Si son similares en algún atributo, es match (true) y quedan fijas
 -De lo contrario, son false y se deben volver a voltear*/
 const matchCards = (array) => {
-  //let matchPos = [];
+  let matchPos = [];
     for(let i = 0; i < array.length; i++){
     if (array.length == 2 && array[0] == array[1]) {
 
       matchPos.push(array);
-      console.log(matchPos);
+
       
       alert('hicieron match');
       /*score += 100;
