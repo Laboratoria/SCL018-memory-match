@@ -57,7 +57,6 @@ const App = () => {
     const card = document.createElement('div');
     card.className = 'card';        
     card.id = shuffleCards[i].id;
-    card.name= shuffleCards.classname;
     
 //Encierro las imagenes en el div anterior
     let frontCard = document.createElement("img");
@@ -81,7 +80,7 @@ const App = () => {
         }, 1000);
       
 }}
-    
+    card.addEventListener("click", flipCard);
 
     const matchCards = (array) => {
       let matchPos = [];
@@ -93,19 +92,15 @@ const App = () => {
           numberScore.innerHTML = score;
           if (score == 900) {
             textScore.innerHTML = "Congrats! You've caught them all!"*/
-    
-          /*array[0].matched = true;
-          array[1].matched = true;*/
           array.length = 0;
-        } else /*if(array.length == 2 && array[0] !== array[1])*/{
-          array.forEach(card.classList.remove('flipCard'));
-          //card.classList.remove('flipCard');
-          //alert('no hicieron match');
-          //array.style.transform= "rotateY(180deg)";
+        } else {
+          document.querySelectorAll(".flipCard").forEach(element => {
+            element.classList.remove("flipCard");
+          });
           array.length = 0;
-        }}}; 
+    }}}; 
     
-        card.addEventListener("click", flipCard);
+
 //Crear contenedor para card.
     const cardContainer = document.createElement('div');
     cardContainer.className = 'cardContainer';
@@ -117,19 +112,6 @@ const App = () => {
 
     cardContainer.appendChild(card);
 }
-
-/*function flipCard() {
-  if (lockBoard) return;
-  if (this === firstCard) return;
-
-  this.classList.add('flip');
-
-  if (!hasFlippedCard) {
-    hasFlippedCard = true;
-    firstCard = this;
-
-    return;
-  }*/
 
   return el;
 
