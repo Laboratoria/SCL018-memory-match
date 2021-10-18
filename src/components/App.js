@@ -6,7 +6,7 @@
 
 import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
 import shuffle from './shuffle.js'; // Importar función shuffle (a gamePlay?)
-//import matchCards from './Match.js';
+import matchCards from './Match.js'; //Importar función match.
 
 const App = () => {
   const el = document.createElement('div');
@@ -32,8 +32,7 @@ const App = () => {
 
   //contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
-  cardsBox.className = 'cardsBox'; 
-84
+  cardsBox.className = 'cardsBox';
   displayMononoke.appendChild(cardsBox);
 
   //Cuadrícula para mostrar puntaje (general)
@@ -56,14 +55,13 @@ const App = () => {
 
   //Declaro variables a utilizar
   let clickCard = [];
-  
 
   //Recorro los elementos del array y los encierro en un div
   for (let i = 0; i < shuffleCards.length; i++) {
     const card = document.createElement('div');
     card.className = 'card';
     card.id = shuffleCards[i].id;
-    card.name = shuffleCards.classname;
+    grid.appendChild(card);
 
     //Encierro las imagenes en el div anterior
     let frontCard = document.createElement("img");
@@ -80,6 +78,7 @@ const App = () => {
     const flipCard = () => {
       if (clickCard.length < 2) {
         clickCard.push(card.id);
+
         card.classList.toggle("flipCard");
 
         setTimeout(() => {
@@ -88,47 +87,9 @@ const App = () => {
 
       }
     }
-
-
-
-    const matchCards = (array) => {
-      let matchPos = [];
-      for (let i = 0; i < array.length; i++) {
-        if (array.length == 2 && array[0] == array[1]) {
-          matchPos.push(array);
-          alert('hicieron match');
-          /*score += 100;
-          numberScore.innerHTML = score;
-          if (score == 900) {
-            textScore.innerHTML = "Congrats! You've caught them all!"*/
-
-          /*array[0].matched = true;
-          array[1].matched = true;*/
-          array.length = 0;
-        } else /*if(array.length == 2 && array[0] !== array[1])*/ {
-          array.forEach(card.classList.remove('flipCard'));
-          //card.classList.remove('flipCard');
-          //alert('no hicieron match');
-          //array.style.transform= "rotateY(180deg)";
-          array.length = 0;
-        }
-      }
-    };
-
     card.addEventListener("click", flipCard);
-    //Crear contenedor para card.
-    const cardContainer = document.createElement('div');
-    cardContainer.className = 'cardContainer';
-    grid.appendChild(cardContainer);
-
-
-
-
-
-    cardContainer.appendChild(card);
   }
 
- 
   return el;
 
 };
