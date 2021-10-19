@@ -1,9 +1,3 @@
-/*Aquí podríamos dejar todos los elementos creados que se muestran en el DOM
--Pantalla de juego en sí con:
-  -Sector cartas
-  -Sector puntaje y botones Menú principal y jugar otra vez(reiniciar juego)*/
-
-
 import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
 import shuffle from './shuffle.js'; // Importar función shuffle (a gamePlay?)
 import matchCards from './Match.js'; //Importar función match.
@@ -17,7 +11,6 @@ const App = () => {
   const displayMononoke = document.createElement('div');
   displayMononoke.className = 'mononokeBg';
   el.appendChild(displayMononoke);
-
 
   // header del juego 
   const header = document.createElement('div');
@@ -47,8 +40,6 @@ const App = () => {
 
   //document.getElementById("btn-intro").addEventListener("click",displayMononoke);
 
-  //funciones y variables para comienzo del juego
-
   //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
   let doubleArray = Mononoke.items.concat(Mononoke.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
   const shuffleCards = shuffle(doubleArray);
@@ -69,12 +60,12 @@ const App = () => {
     frontCard.className = 'frontCard';
     card.appendChild(frontCard);
 
-    let backCard = document.createElement("img"); //En el tema mononoke
+    let backCard = document.createElement("img");
     backCard.src = './img/kodamabg.png';
     backCard.className = 'backCard';
     card.appendChild(backCard);
 
-    //Hacer flip a 2 cartas. (Esto podría ir en gamePlay?)
+    //Hacer flip a 2 cartas.
     const flipCard = () => {
       if (clickCard.length < 2) {
         clickCard.push(card);
