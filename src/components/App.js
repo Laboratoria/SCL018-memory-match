@@ -77,13 +77,13 @@ const App = () => {
     //Hacer flip a 2 cartas. (Esto podría ir en gamePlay?)
     const flipCard = () => {
       if (clickCard.length < 2) {
-        clickCard.push(card.id);
-
-        card.classList.toggle("flipCard");
+        clickCard.push(card);
+        //clickedElements.push(card);
+        card.classList.add("flipCard");
 
         setTimeout(() => {
-          matchCards(clickCard);
-        }, 1000);
+        matchCards(clickCard);
+       }, 2000);
 
       }
     }

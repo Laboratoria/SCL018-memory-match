@@ -253,7 +253,10 @@
 .flipCard {
   transform: rotateY(180deg);
 }
-
+.matchCards {
+  pointer-events: none;
+  visibility: hidden;
+}
 
 @keyframes gameStart {
 
