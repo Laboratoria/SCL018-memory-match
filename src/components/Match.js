@@ -1,28 +1,18 @@
-/*Funciones del Match
--Acceder a la data a ser evaluada
--Recorrer elecciones de jugador
--Guardar las elecciones en una variable
--Comparar similitud de carta 1 y carta 2
--Si son similares en algún atributo, es match (true) y quedan fijas
--De lo contrario, son false y se deben volver a voltear*/
+//Funcion Match
 const matchCards = (array) => {
-  let matchPos = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array.length == 2 && array[0] == array[1]) {
-      matchPos.push(array);
-      alert('hicieron match');
-      /*score += 100;
-      numberScore.innerHTML = score;
-      if (score == 900) {
-        textScore.innerHTML = "Congrats! You've caught them all!"*/
-      array.length = 0;
-    } else {
-      document.querySelectorAll(".flipCard").forEach(element => {
+  let matchPos = []; //Se crea variable con array abierto.
+    if (array.length == 2 && array[0].id == array[1].id) { //Se comparan los id de los elementos clickeados.
+      matchPos.push(array[0], array[1]); //Si son iguales se encierran los elementos en la variable.
+      matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
+        element.classList.add("matchCards");
+      });
+      array.length = 0; //Si hacen match se vacía el array (parámetro).
+    } else { //Si no hacen match...
+      document.querySelectorAll(".flipCard").forEach(element => {//Se toman los elementos y se remueve el flip para que se volteen las cartas.
         element.classList.remove("flipCard");
       });
-      array.length = 0;
+      array.length = 0; //Si no hacen match se vacía el array (parámetro).
     }
-  }
 };
     
 export default matchCards;
