@@ -1,3 +1,6 @@
+#root {
+  display: none;
+}
 @font-face {
   font-family:'Ghibli Bold';
   font-style: normal;
