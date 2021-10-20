@@ -1,5 +1,5 @@
 import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
-import shuffle from './shuffle.js'; // Importar función shuffle (a gamePlay?)
+import shuffle from './shuffle.js'; // Importar función shuffle 
 import matchCards from './Match.js'; //Importar función match.
 
 const App = () => {

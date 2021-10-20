@@ -15,8 +15,7 @@
     src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
     }
 
-    
-:link, :visited { cursor: url(./img/cursor.svg), url(./img/cursor.cur), pointer }
+  
 
 /* Estilo  de la intro*/
 .logo-ghibli {
@@ -58,7 +57,7 @@
   margin-top: none;
   margin-bottom:10px;
   justify-content: center;
-  cursor: url('./img/cursor.svg'), url('./img/cursor.cur'), auto;	
+  cursor: url('./img/cursor.cur'), auto;	
 }
 
 .btn-intro:hover{
@@ -118,26 +117,10 @@
     border-radius: 10px;
     border: 3px solid #000000;
   
-
   }
 
-  .mononoke{
-   margin-left: 100px;
-   margin-bottom: 250px;
+  
     
-
-  }
-  .howl{
-    margin-left: 50px;
-    margin-bottom: 250px;
-   
-  }
-  .totoro{
-    margin-left:50px;
-    margin-bottom: 250px;
-
-    
-  }
     html, body {
       height:100%;
       margin: 0;
@@ -187,6 +170,12 @@
   transform-style: preserve-3d;
   animation: gameStart 3s;
 }
+
+.card:hover{
+  box-shadow: 0 4px 16px rgb(119, 219, 236);
+}
+
+
 /*.cardContainer:hover.card {
   transform: rotateY(180deg);
 }*/
@@ -258,7 +247,8 @@
 }
 .matchCards {
   pointer-events: none;
-  visibility: hidden;
+  transform: rotateY(180deg);
+  
 }
 
 @keyframes gameStart {
