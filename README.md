@@ -1,6 +1,7 @@
 # Memory Match Game Estudio Ghibli
 
 ### Definición del producto
+Memory Match de estudio Ghibli es un juego de memoria que consiste en encontrar pares de cartas destapandolas de 2 en 2 hasta encontrar todos los pares. 
 
 ### Historias de usuario
 
