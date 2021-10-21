@@ -1,5 +1,5 @@
-import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
-import shuffle from './shuffle.js'; // Importar función shuffle (a gamePlay?)
+import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js
+import shuffle from './shuffle.js'; // Importar función shuffle
 //import matchCards from './Match.js'; //Importar función match.
 
 const App = () => {
@@ -43,6 +43,14 @@ const App = () => {
   scoreNum.className = 'scoreNum';
   theScore.appendChild(scoreNum);
   scoreBox.appendChild(theScore);
+  const monoGif = document.createElement('img');
+  monoGif.className = 'monoGif';
+  monoGif.src = './img/gifMono.gif';
+  scoreBox.appendChild(monoGif);
+  const replayBut = document.createElement('img');
+  replayBut.className = 'replayBut';
+  replayBut.src = './img/returnImg.png';
+  scoreBox.appendChild(replayBut);
 
   //Cuadrícula para distribuir las cartas 
   const grid = document.createElement('div');
@@ -111,7 +119,7 @@ const App = () => {
           });
           score+=100;
           scoreNum.innerHTML = score;
-          if (score == 600){
+          if (score == 200){
             winner.classList.add('active');
           } 
           array.length = 0; //Si hacen match se vacía el array (parámetro).
@@ -125,7 +133,12 @@ const App = () => {
     };
      
   }
+  //(En la pantalla Ganadora) Al dar click en botón se reinicia el juego. 
   winBut.addEventListener('click',function() {
+    location.reload();
+  })
+  //(En la pantalla de juego) Al dar click en botón se reinicia el juego. 
+  replayBut.addEventListener('click',function() {
     location.reload();
   })
   return el;
