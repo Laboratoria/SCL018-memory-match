@@ -6,7 +6,7 @@ const App = () => {
   const el = document.createElement('div');
   el.className = 'App';
   el.textContent = '';
-//Declaro variables a utilizar
+  //Declaro variables a utilizar
   let clickCard = [];
   let score = 0;
 
@@ -25,15 +25,20 @@ const App = () => {
   logoHeader.src = './img/logoprincesa.png';
   header.appendChild(logoHeader);
 
-  //Contenedor de las cartas (también general)
+  //contenedor de las cartas (también general)
+  const Box = document.createElement('div');
+  Box.className = 'Box';
+  displayMononoke.appendChild(Box);
+
+  //contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
-  displayMononoke.appendChild(cardsBox);
+  Box.appendChild(cardsBox);
 
   //Cuadrícula para mostrar puntaje (general)
   const scoreBox = document.createElement('div');
   scoreBox.className = 'scoreBox';
-  displayMononoke.appendChild(scoreBox);
+  Box.appendChild(scoreBox);
 
   //Mostrar el puntaje
   const theScore = document.createElement('p');
@@ -52,10 +57,10 @@ const App = () => {
   //Se crea div con mensaje ganador.
   const winner = document.createElement('div');
   winner.className = 'winner';
-  winner.id= 'winner';
+  winner.id = 'winner';
   const winnerText = document.createElement('p');
   winnerText.className = 'winnerText';
-  winnerText.innerHTML= '¡GANASTE!';
+  winnerText.innerHTML = '¡GANASTE!';
   const winBut = document.createElement('button');
   winBut.className = 'winBut';
   winBut.innerHTML = 'Volver a Jugar';
@@ -68,7 +73,7 @@ const App = () => {
   //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
   let doubleArray = Mononoke.items.concat(Mononoke.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
   const shuffleCards = shuffle(doubleArray);
-  
+
   //Recorro los elementos del array y los encierro en un div
   for (let i = 0; i < shuffleCards.length; i++) {
     const card = document.createElement('div');
@@ -94,8 +99,8 @@ const App = () => {
         card.classList.add("flipCard");
 
         setTimeout(() => {
-        matchCards(clickCard);
-       }, 2000);
+          matchCards(clickCard);
+        }, 2000);
 
       }
     }
@@ -104,28 +109,28 @@ const App = () => {
     //Función Match
     const matchCards = (array) => {
       let matchPos = []; //Se crea variable con array abierto.
-        if (array.length == 2 && array[0].id == array[1].id) { //Se comparan los id de los elementos clickeados.
-          matchPos.push(array[0], array[1]); //Si son iguales se encierran los elementos en la variable.
-          matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
-            element.classList.add("matchCards");
-          });
-          score+=100;
-          scoreNum.innerHTML = score;
-          if (score == 600){
-            winner.classList.add('active');
-          } 
-          array.length = 0; //Si hacen match se vacía el array (parámetro).
-        } else { //Si no hacen match...
-          document.querySelectorAll(".flipCard").forEach(element => {//Se toman los elementos y se remueve el flip para que se volteen las cartas.
-            element.classList.remove("flipCard");
-          });
-          array.length = 0; //Si no hacen match se vacía el array (parámetro).
+      if (array.length == 2 && array[0].id == array[1].id) { //Se comparan los id de los elementos clickeados.
+        matchPos.push(array[0], array[1]); //Si son iguales se encierran los elementos en la variable.
+        matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
+          element.classList.add("matchCards");
+        });
+        score += 100;
+        scoreNum.innerHTML = score;
+        if (score == 200) {
+          winner.classList.add('active');
         }
-        
+        array.length = 0; //Si hacen match se vacía el array (parámetro).
+      } else { //Si no hacen match...
+        document.querySelectorAll(".flipCard").forEach(element => { //Se toman los elementos y se remueve el flip para que se volteen las cartas.
+          element.classList.remove("flipCard");
+        });
+        array.length = 0; //Si no hacen match se vacía el array (parámetro).
+      }
+
     };
-     
+
   }
-  winBut.addEventListener('click',function() {
+  winBut.addEventListener('click', function () {
     location.reload();
   })
   return el;
