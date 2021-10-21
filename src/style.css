@@ -26,18 +26,22 @@
 }
 
 .intro {
-  background-image: radial-gradient(circle at 15.93% 1.35%, #78d2b2 0, #70d3b9 10%, #68d3c1 20%, #60d3c9 30%, #5ad3d1 40%, #55d3d8 50%, #52d3df 60%, #52d2e6 70%, #54d1ec 80%, #59d0f1 90%, #60cef6 100%);
-  height: 630px;
+  background-image: url('./img/introBackground');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 .img-intro {
   position:relative;
-  width: 420px;
-  height: 520px;
+  width: 500px;
+  height: 447px;
   display:block;
   margin:auto;
   padding: 20px;
   justify-content: center;
+  margin-bottom: 50px;
+  margin-top: none;
 
 }
 
@@ -46,10 +50,10 @@
   position: relative;
   font-family: 'Ghibli Regular';
   padding: 5px;
-  font-weight: 600;
-  font-size: 45px;
-  color: #ffffff;
-  background-color: #52d3e0;
+  font-weight: 500;
+  font-size: 40px;
+  color: #fdc99e;
+  background-color: #10494e;
   outline:none;
   border:none;
   margin:0 auto;
@@ -60,13 +64,38 @@
 }
 
 .btn-intro:hover{
-  color: #ffffff;
-  background-color: #86e5ee;
-  box-shadow: 0 4px 16px rgb(119, 219, 236);
+  color: #ffc6ac;
+  background-color: #0d4449;
+  box-shadow: 0 4px 16px rgb(193, 230, 238);
   transition: all 0.2s ease;
   border-radius: 10px;
 }
 
+.btn-instructions {
+  display:flex;
+  position: relative;
+  font-family: 'Ghibli Regular';
+  padding: 5px;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fdc99e;
+  background-color: #10494e;
+  outline:none;
+  border:none;
+  margin:0 auto;
+  margin-top: none;
+  margin-bottom:10px;
+  justify-content: center;
+  cursor: url('./img/cursor.cur'), auto;	
+}
+
+.btn-instructions:hover{
+  color: #ffc6ac;
+  background-color: #0d4449;
+  box-shadow: 0 4px 16px rgb(193, 230, 238);
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
 
 .App{
   height: 100%;
@@ -237,6 +266,7 @@
   margin-right: 30px;
   margin-bottom:50px;
   margin-top: none;
+
 }  
 @media (min-width: 768px) {
   .scoreBox {
@@ -273,17 +303,35 @@
     }
   }
   .theScore {
-    font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(219, 241, 13);
+    font-size: 25px;
+    font-family:  'Ghibli Regular';
+    color: #f6c501;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    
   }
+
+  .winnerBox {
+    background-image: url(./img/kodamawp.jpg);
+    display: flex;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+  background-size:auto;
+  }
+  
   .winner {
     background: rgba(0, 0, 0,.3);
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -294,14 +342,17 @@
     visibility: visible;
   }
   .winnerText {
-    font-size: 100px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(19, 119, 5);
+    font-size: 180px;
+    font-family: 'Ghibli Regular';
+    color:#fff;
+    text-align: center;
+    margin-left: 10px;
     
   }
   .winBut {
     width: 100px;
     height: 40px;
     border-radius: 4px;
+    margin-top: 80px;
   }
   

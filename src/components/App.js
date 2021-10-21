@@ -58,14 +58,17 @@ const App = () => {
   const winner = document.createElement('div');
   winner.className = 'winner';
   winner.id = 'winner';
+  const winnerBox = document.createElement('div');
+  winnerBox.className = 'winnerBox';
   const winnerText = document.createElement('p');
   winnerText.className = 'winnerText';
   winnerText.innerHTML = '¡GANASTE!';
   const winBut = document.createElement('button');
   winBut.className = 'winBut';
   winBut.innerHTML = 'Volver a Jugar';
-  winner.appendChild(winnerText);
-  winner.appendChild(winBut);
+  winner.appendChild(winnerBox);
+  winnerBox.appendChild(winnerText);
+  winnerBox.appendChild(winBut);
   displayMononoke.appendChild(winner);
 
   //document.getElementById("btn-intro").addEventListener("click",displayMononoke);
