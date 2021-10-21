@@ -7,7 +7,6 @@
   font-weight: normal;
   src: local('Ghibli Bold'), url('./src/Al-Samman - Ghibli-Bold.woff') format('woff');
   }
-<<<<<<< HEAD
 
   @font-face {
     font-family: 'Ghibli Regular';
@@ -27,7 +26,7 @@
 }
 
 .intro {
- background-image: url('./img/intro.gif');
+ background-image: url('./img/kodamaIntro.gif');
  background-repeat:no-repeat;
  background-size:cover;
  background-position: center center;
@@ -156,8 +155,6 @@
 .card:hover{
   box-shadow: 0 4px 16px rgb(119, 219, 236);
 }
-=======
->>>>>>> c2cf34b56e6ad810921ed343d03d62c85676c9a2
 
   @font-face {
     font-family: 'Ghibli Regular';
@@ -166,7 +163,6 @@
     src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
     }
 
-<<<<<<< HEAD
 .frontCard {
   height: 100%;
   width: 100%;
@@ -249,131 +245,6 @@
   height: 50px;
   width: 200px;
   margin-top: 10px;
-=======
-  
-/* Estilo  de la intro*/
-.logo-ghibli {
-  position: absolute;
-  width: 140px;
-  height: 59px;
-  margin-left: 68px;
-  margin-top: 49px;
-}
-
-.intro {
-  background-image: radial-gradient(circle at 15.93% 1.35%, #78d2b2 0, #70d3b9 10%, #68d3c1 20%, #60d3c9 30%, #5ad3d1 40%, #55d3d8 50%, #52d3df 60%, #52d2e6 70%, #54d1ec 80%, #59d0f1 90%, #60cef6 100%);
-  height: 630px;
-}
-
-.img-intro {
-  position:relative;
-  width: 420px;
-  height: 520px;
-  display:block;
-  margin:auto;
-  padding: 20px;
-  justify-content: center;
-
-}
-
-.btn-intro {
-  display:flex;
-  position: relative;
-  font-family: 'Ghibli Regular';
-  padding: 5px;
-  font-weight: 600;
-  font-size: 45px;
-  color: #ffffff;
-  background-color: #52d3e0;
-  outline:none;
-  border:none;
-  margin:0 auto;
-  margin-top: none;
-  margin-bottom:10px;
-  justify-content: center;
-  cursor: url('./img/cursor.cur'), auto;	
-}
-
-.btn-intro:hover{
-  color: #ffffff;
-  background-color: #86e5ee;
-  box-shadow: 0 4px 16px rgb(119, 219, 236);
-  transition: all 0.2s ease;
-  border-radius: 10px;
-}
-
-
-.App{
-  height: 100%;
-  width: 100%;
-}
-
-/*css de gameplay*/
-.grid {
-  display: grid;
-  flex-wrap: wrap;
-  margin: auto;
-  grid-template-columns: auto auto auto auto;
-  border-radius: 25px;
-  background: rgba(212, 26, 26, 0.23);
-}
-@media (min-width: 768px) {
-  .grid {
-    width: 640px;
-    height: 500px;
-    display: grid;
-    flex-wrap: wrap;
-    margin: auto;
-    grid-template-columns: auto auto auto auto;
-    border-radius: 25px;
-    background: rgba(50, 224, 214, 0.23);
-  }
-}
-
-.card {
-  width: 65px;
-  height: 80px;
-  border: 3px #354BA1;
-  border-radius: 10px;
-  margin: 5px;
-  display: flex;
-  position: relative;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  animation: gameStart 3s;
-}
-@media (min-width: 768px) {
-  .card {
-    width: 100px;
-    height: 120px;
-    border: 3px #354BA1;
-    border-radius: 10px;
-    margin: auto;
-    display: flex;
-    position: relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    animation: gameStart 3s;
-  }
-}
-
-
-.card:hover{
-  box-shadow: 0 4px 16px rgb(119, 219, 236);
-}
-
-
-.frontCard {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  justify-content: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: rotateY(180deg);
-  background-color: #54C0EE;
-  border-radius: 10px;
->>>>>>> c2cf34b56e6ad810921ed343d03d62c85676c9a2
 }
 @media (min-width: 768px) {
   .logo {
@@ -383,8 +254,6 @@
   }
  }
 
-<<<<<<< HEAD
-=======
 
 .backCard {
   height: 100%;
@@ -464,7 +333,6 @@
   }
  }
 
->>>>>>> c2cf34b56e6ad810921ed343d03d62c85676c9a2
 .Box {
   display: grid;
 }
@@ -518,42 +386,36 @@
         transform: rotateY(0deg);
     }
   }
-.theScore {
-  font-size: 50px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(219, 241, 13);
+  .theScore {
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(219, 241, 13);
   }
-.winner {
-  background: rgba(0, 0, 0,.3);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  visibility: hidden;
+  .winner {
+    background: rgba(0, 0, 0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
   }
-.winner.active {
-  visibility: visible;
+  .winner.active {
+    visibility: visible;
   }
-.winnerText {
-  font-size: 100px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(19, 119, 5);
+  .winnerText {
+    font-size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(19, 119, 5);
     
   }
-.winBut {
-  width: 100px;
-  height: 40px;
-  border-radius: 4px;
-}
+  .winBut {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+  }
   
-.monoGif {
-  width: 300px;
-}
-.replayBut {
-  width: 50px;
-}
