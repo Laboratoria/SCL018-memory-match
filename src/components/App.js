@@ -23,15 +23,20 @@ const App = () => {
   logoHeader.src = './img/logoprincesa.png';
   header.appendChild(logoHeader);
 
+    //contenedor de las cartas (también general)
+    const Box = document.createElement('div');
+    Box.className = 'Box';
+    displayMononoke.appendChild(Box);
+
   //contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
-  displayMononoke.appendChild(cardsBox);
+  Box.appendChild(cardsBox);
 
   //Cuadrícula para mostrar puntaje (general)
   const scoreBox = document.createElement('div');
   scoreBox.className = 'scoreBox';
-  displayMononoke.appendChild(scoreBox);
+  Box.appendChild(scoreBox);
 
   //Cuadrícula para distribuir las cartas 
   const grid = document.createElement('div');
@@ -85,3 +90,4 @@ const App = () => {
 
 };
 export default App;
+
