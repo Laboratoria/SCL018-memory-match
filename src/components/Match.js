@@ -6,6 +6,7 @@ const matchCards = (array) => {
       matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
         element.classList.add("matchCards");
       });
+      score += 100;
       array.length = 0; //Si hacen match se vacía el array (parámetro).
     } else { //Si no hacen match...
       document.querySelectorAll(".flipCard").forEach(element => {//Se toman los elementos y se remueve el flip para que se volteen las cartas.
