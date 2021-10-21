@@ -19,7 +19,7 @@
 
 /* Estilo  de la intro*/
 .logo-ghibli {
-  position: absolute;
+  position:relative;
   width: 140px;
   height: 59px;
   margin-left: 68px;
@@ -27,18 +27,23 @@
 }
 
 .intro {
-  background-image: radial-gradient(circle at 15.93% 1.35%, #78d2b2 0, #70d3b9 10%, #68d3c1 20%, #60d3c9 30%, #5ad3d1 40%, #55d3d8 50%, #52d3df 60%, #52d2e6 70%, #54d1ec 80%, #59d0f1 90%, #60cef6 100%);
-  height: 630px;
+ background-image: url('./img/intro.gif');
+ background-repeat:no-repeat;
+ background-size:cover;
+ background-position: center center;
+ background-attachment: fixed;
+ background-color: #464646;
 }
 
 .img-intro {
   position:relative;
-  width: 420px;
-  height: 520px;
+  width: 400px;
+  height: 358px;
   display:block;
   margin:auto;
-  padding: 20px;
   justify-content: center;
+  padding-bottom: 50px;
+  padding-top: none;
 
 }
 
@@ -49,8 +54,8 @@
   padding: 5px;
   font-weight: 600;
   font-size: 45px;
-  color: #ffffff;
-  background-color: #52d3e0;
+  color: #f7debf;
+  background-color: #042629;
   outline:none;
   border:none;
   margin:0 auto;
@@ -60,7 +65,31 @@
   cursor: url('./img/cursor.cur'), auto;	
 }
 
+.btn-instructions {
+  display:flex;
+  position: relative;
+  font-family: 'Ghibli Regular';
+  font-weight: 500;
+  font-size: 30px;
+  color: #f7debf;
+  background-color: #042629;
+  outline:none;
+  border:none;
+  margin:0 auto;
+  margin-top: none;
+  margin: none;
+  justify-content: center;
+  cursor: url('./img/cursor.cur'), auto;	
+}
+
 .btn-intro:hover{
+  color: #ffffff;
+  background-color: #86e5ee;
+  box-shadow: 0 4px 16px rgb(119, 219, 236);
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+.btn-instructions:hover{
   color: #ffffff;
   background-color: #86e5ee;
   box-shadow: 0 4px 16px rgb(119, 219, 236);
@@ -206,7 +235,7 @@
 .mononokeBg {
   background-image:url('./img/fondoprincesa.png');
   background-repeat:no-repeat;
-  background-size:auto;
+  background-size:cover;
   position:relative;
   display:grid;
   flex-wrap:wrap;
