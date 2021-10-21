@@ -518,36 +518,42 @@
         transform: rotateY(0deg);
     }
   }
-  .theScore {
-    font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(219, 241, 13);
+.theScore {
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(219, 241, 13);
   }
-  .winner {
-    background: rgba(0, 0, 0,.3);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    visibility: hidden;
+.winner {
+  background: rgba(0, 0, 0,.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  visibility: hidden;
   }
-  .winner.active {
-    visibility: visible;
+.winner.active {
+  visibility: visible;
   }
-  .winnerText {
-    font-size: 100px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(19, 119, 5);
+.winnerText {
+  font-size: 100px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(19, 119, 5);
     
   }
-  .winBut {
-    width: 100px;
-    height: 40px;
-    border-radius: 4px;
-  }
+.winBut {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+}
   
+.monoGif {
+  width: 300px;
+}
+.replayBut {
+  width: 50px;
+}
