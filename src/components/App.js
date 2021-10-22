@@ -1,5 +1,5 @@
-import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js (Importarla a una función que use los datos para crear las cartas)
-import shuffle from './shuffle.js'; // Importar función shuffle (a gamePlay?)
+import Mononoke from '../data/Ghibli/Ghibli.js'; // Importar Mononoke de Ghibli.js
+import shuffle from './shuffle.js'; // Importar función shuffle
 //import matchCards from './Match.js'; //Importar función match.
 
 const App = () => {
@@ -25,20 +25,15 @@ const App = () => {
   logoHeader.src = './img/logoprincesa.png';
   header.appendChild(logoHeader);
 
-  //contenedor de las cartas (también general)
-  const Box = document.createElement('div');
-  Box.className = 'Box';
-  displayMononoke.appendChild(Box);
-
-  //contenedor de las cartas (también general)
+  //Contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
-  Box.appendChild(cardsBox);
+  displayMononoke.appendChild(cardsBox);
 
   //Cuadrícula para mostrar puntaje (general)
   const scoreBox = document.createElement('div');
   scoreBox.className = 'scoreBox';
-  Box.appendChild(scoreBox);
+  displayMononoke.appendChild(scoreBox);
 
   //Mostrar el puntaje
   const theScore = document.createElement('p');
@@ -48,6 +43,14 @@ const App = () => {
   scoreNum.className = 'scoreNum';
   theScore.appendChild(scoreNum);
   scoreBox.appendChild(theScore);
+  const monoGif = document.createElement('img');
+  monoGif.className = 'monoGif';
+  monoGif.src = './img/gifMono.gif';
+  scoreBox.appendChild(monoGif);
+  const replayBut = document.createElement('img');
+  replayBut.className = 'replayBut';
+  replayBut.src = './img/returnImg.png';
+  scoreBox.appendChild(replayBut);
 
   //Cuadrícula para distribuir las cartas 
   const grid = document.createElement('div');
@@ -60,6 +63,7 @@ const App = () => {
   winner.id = 'winner';
   const winnerBox = document.createElement('div');
   winnerBox.className = 'winnerBox';
+  winner.id = 'winner';
   const winnerText = document.createElement('p');
   winnerText.className = 'winnerText';
   winnerText.innerHTML = '¡GANASTE!';
@@ -133,7 +137,12 @@ const App = () => {
     };
 
   }
+  //(En la pantalla Ganadora) Al dar click en botón se reinicia el juego. 
   winBut.addEventListener('click', function () {
+    location.reload();
+  })
+  //(En la pantalla de juego) Al dar click en botón se reinicia el juego. 
+  replayBut.addEventListener('click', function () {
     location.reload();
   })
   return el;
