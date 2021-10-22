@@ -67,9 +67,9 @@ const App = () => {
   const winnerText = document.createElement('p');
   winnerText.className = 'winnerText';
   winnerText.innerHTML = '¡GANASTE!';
-  const winBut = document.createElement('button');
+  const winBut = document.createElement('img');
   winBut.className = 'winBut';
-  winBut.innerHTML = 'Volver a Jugar';
+  winBut.src = './img/botonotravez.png';
   winner.appendChild(winnerBox);
   winnerBox.appendChild(winnerText);
   winnerBox.appendChild(winBut);

@@ -27,8 +27,8 @@ body {
   position: relative;
   width: 140px;
   height: 59px;
-  margin-left: 68px;
-  margin-top: 49px;
+  padding-left: 68px;
+  padding-top: 49px;
   display: flex;
 }
 
@@ -36,6 +36,7 @@ body {
   background-image: url('./img/kodamaIntro.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .img-intro {
@@ -45,9 +46,8 @@ body {
   display:flex;
   margin: auto;
   justify-content: center;
-  margin-bottom: 50px;
-  margin-top: none;
-  padding: 0;
+  padding-bottom: 50px;
+  padding-top: none;
 }
 
 .btn-intro {
@@ -67,7 +67,6 @@ body {
   border: none;
   margin: 0 auto;
   margin-top: none;
-  margin-bottom: 10px;
   justify-content: center;
   cursor: url('./img/cursor.cur'), auto;
 }
@@ -84,7 +83,6 @@ body {
   border: none;
   margin: 0 auto;
   margin-top: none;
-  margin: none;
   justify-content: center;
   cursor: url('./img/cursor.cur'), auto;
 }
@@ -204,11 +202,9 @@ body {
   background-image: url('./img/fondoprincesa.png');
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   display: grid;
-  flex-wrap: wrap;
-  height: 500px;
-  width: auto;
+  height: 100vh;
+  width: 60vw;
 }
 
 @media (min-width: 768px) {
@@ -333,11 +329,14 @@ body {
 
 .winnerBox {
   background-image: url(./img/perfect-princess-mononoke-wallpaper-hd-wallpapers-of-nature-full-hd-desktop-backgrounds-for-pc-mac-laptop-tablet-chez-lounge-furniture-princess-mononoke-1967159962.jpg);
-  display: flex;
+  display: table-cell;
   border-radius: 25px;
   width: 450px;
+  justify-content: center;
   background-repeat: no-repeat;
   background-size: contain;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .winner {
@@ -364,21 +363,23 @@ body {
   display: flex;
   font-family: 'Ghibli Regular';
   color: black;
-¿
 }
 
 
 .winBut {
   width: 200px;
   height: 40px;
+  display:block;
   border-radius: 4px;
-  margin-top: 200px;
-  margin-bottom: 10px;
-  font-family: 'Ghibli Regular';
-  color: #fff;
-  font-size: 20px;
-  background-color: #30403A;
-  justify-content: center;
+  margin-top: none;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+.winBut:hover {
+  box-shadow: 0 4px 16px rgb(119, 219, 236);
 }
 
 
