@@ -1,105 +1,108 @@
 #root {
   display: none;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 @font-face {
-  font-family:'Ghibli Bold';
+  font-family: 'Ghibli Bold';
   font-style: normal;
   font-weight: normal;
   src: local('Ghibli Bold'), url('./src/Al-Samman - Ghibli-Bold.woff') format('woff');
-  }
+}
 
-  @font-face {
-    font-family: 'Ghibli Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
-    }
+@font-face {
+  font-family: 'Ghibli Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
+}
 
-  
+
 /* Estilo  de la intro*/
 .logo-ghibli {
-  position:relative;
+  position: relative;
   width: 140px;
   height: 59px;
   margin-left: 68px;
   margin-top: 49px;
+  display: flex;
 }
 
 .intro {
- background-image: url('./img/kodamaIntro.gif');
- background-repeat:no-repeat;
- background-size:cover;
- background-position: center center;
- background-attachment: fixed;
- background-color: #464646;
+  background-image: url('./img/kodamaIntro.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .img-intro {
-  position:relative;
-  width: 400px;
-  height: 358px;
-  display:block;
-  margin:auto;
+  position: relative;
+  width: 500px;
+  height: 400px;
+  display:flex;
+  margin: auto;
   justify-content: center;
-  padding-bottom: 50px;
-  padding-top: none;
-
+  margin-bottom: 50px;
+  margin-top: none;
+  padding: 0;
 }
 
 .btn-intro {
-  display:flex;
+  display: flex;
   position: relative;
   font-family: 'Ghibli Regular';
   padding: 5px;
+  font-weight: 500;
+  font-size: 40px;
+  color: #fdc99e;
+  background-color: #10494e;
   font-weight: 600;
   font-size: 45px;
   color: #f7debf;
   background-color: #042629;
-  outline:none;
-  border:none;
-  margin:0 auto;
+  outline: none;
+  border: none;
+  margin: 0 auto;
   margin-top: none;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   justify-content: center;
-  cursor: url('./img/cursor.cur'), auto;	
+  cursor: url('./img/cursor.cur'), auto;
 }
 
 .btn-instructions {
-  display:flex;
+  display: flex;
   position: relative;
   font-family: 'Ghibli Regular';
   font-weight: 500;
   font-size: 30px;
   color: #f7debf;
   background-color: #042629;
-  outline:none;
-  border:none;
-  margin:0 auto;
+  outline: none;
+  border: none;
+  margin: 0 auto;
   margin-top: none;
   margin: none;
   justify-content: center;
-  cursor: url('./img/cursor.cur'), auto;	
+  cursor: url('./img/cursor.cur'), auto;
 }
 
-.btn-intro:hover{
+.btn-intro:hover {
+  color: #ffc6ac;
+  background-color: #0d4449;
+  box-shadow: 0 4px 16px rgb(193, 230, 238);
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+.btn-instructions:hover {
   color: #ffffff;
   background-color: #86e5ee;
   box-shadow: 0 4px 16px rgb(119, 219, 236);
   transition: all 0.2s ease;
   border-radius: 10px;
-}
-.btn-instructions:hover{
-  color: #ffffff;
-  background-color: #86e5ee;
-  box-shadow: 0 4px 16px rgb(119, 219, 236);
-  transition: all 0.2s ease;
-  border-radius: 10px;
-}
-
-
-.App{
-  height: 100%;
-  width: 100%;
 }
 
 /*css de gameplay*/
@@ -111,6 +114,7 @@
   border-radius: 25px;
   background: rgba(212, 26, 26, 0.23);
 }
+
 @media (min-width: 768px) {
   .grid {
     width: 640px;
@@ -136,6 +140,7 @@
   transform-style: preserve-3d;
   animation: gameStart 3s;
 }
+
 @media (min-width: 768px) {
   .card {
     width: 100px;
@@ -152,16 +157,16 @@
 }
 
 
-.card:hover{
+.card:hover {
   box-shadow: 0 4px 16px rgb(119, 219, 236);
 }
 
-  @font-face {
-    font-family: 'Ghibli Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
-    }
+@font-face {
+  font-family: 'Ghibli Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Ghibli Regular'), url('./src/Eyad Al-Samman - Ghibli.woff') format('woff');
+}
 
 .frontCard {
   height: 100%;
@@ -175,7 +180,6 @@
   border-radius: 10px;
 }
 
-
 .backCard {
   height: 100%;
   width: 100%;
@@ -184,6 +188,7 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
 @media (min-width: 768px) {
   .backCard {
     height: 100%;
@@ -196,23 +201,24 @@
 }
 
 .mononokeBg {
-  background-image:url('./img/fondoprincesa.png');
-  background-repeat:no-repeat;
-  background-size:cover;
-  position:relative;
-  display:grid;
-  flex-wrap:wrap;
+  background-image: url('./img/fondoprincesa.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  flex-wrap: wrap;
   height: 500px;
   width: auto;
 }
+
 @media (min-width: 768px) {
   .mononokeBg {
-    background-image:url('./img/fondoprincesa.png');
-    background-repeat:no-repeat;
-    background-size:auto;
-    position:relative;
-    display:grid;
-    flex-wrap:wrap;
+    background-image: url('./img/fondoprincesa.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;
     height: auto;
     width: auto;
   }
@@ -222,12 +228,13 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 75px;
+  height: 60px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 1;
 }
+
 @media (min-width: 768px) {
   .header {
     display: flex;
@@ -240,102 +247,11 @@
     grid-row-end: 1;
   }
 }
-
-.logo {
-  height: 50px;
-  width: 200px;
-  margin-top: 10px;
-}
-@media (min-width: 768px) {
-  .logo {
-    height: 80px;
-    width: 400px;
-    margin-top: 20px;
-  }
- }
-
-
-.backCard {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  justify-content: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-@media (min-width: 768px) {
-  .backCard {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-}
-
-.mononokeBg {
-  background-image:url('./img/fondoprincesa.png');
-  background-repeat:no-repeat;
-  background-size:auto;
-  position:relative;
-  display:grid;
-  flex-wrap:wrap;
-  height: 500px;
-  width: auto;
-}
-@media (min-width: 768px) {
-  .mononokeBg {
-    background-image:url('./img/fondoprincesa.png');
-    background-repeat:no-repeat;
-    background-size:auto;
-    position:relative;
-    display:grid;
-    flex-wrap:wrap;
-    height: auto;
-    width: auto;
-  }
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 75px;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-@media (min-width: 768px) {
-  .header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 120px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
-  }
-}
-
-.logo {
-  height: 50px;
-  width: 200px;
-  margin-top: 10px;
-}
-@media (min-width: 768px) {
-  .logo {
-    height: 80px;
-    width: 400px;
-    margin-top: 20px;
-  }
- }
 
 .Box {
   display: grid;
 }
+
 @media (min-width: 768px) {
   .Box {
     display: grid;
@@ -349,9 +265,11 @@
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 30px;
-  margin-bottom:50px;
+  margin-bottom: 50px;
   margin-top: none;
-}  
+
+}
+
 @media (min-width: 768px) {
   .scoreBox {
     background: rgba(50, 224, 214, 0.23);
@@ -360,62 +278,107 @@
     width: 300px;
     margin-left: 10px;
     margin-right: 30px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     margin-top: none;
-  }  
+  }
 }
 
 .flipCard {
   transform: rotateY(180deg);
 }
+
 .matchCards {
   pointer-events: none;
   transform: rotateY(180deg);
-  
+
 }
 
 @keyframes gameStart {
 
-    60%,
-    90% {
-        transform: rotateY(180deg);
-    }
-  
-    30%,
-    100% {
-        transform: rotateY(0deg);
-    }
+  60%,
+  90% {
+    transform: rotateY(180deg);
   }
-  .theScore {
-    font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(219, 241, 13);
+
+  30%,
+  100% {
+    transform: rotateY(0deg);
   }
-  .winner {
-    background: rgba(0, 0, 0,.3);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+}
+
+.theScore {
+  font-size: 30px;
+  font-family: 'Ghibli Regular';
+  color: #f6c501;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+
+}
+
+
+  .monoGif{
+    width: 80%;
+    height: 40%;
+    margin-left: 35px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    visibility: hidden;
-  }
-  .winner.active {
-    visibility: visible;
-  }
-  .winnerText {
-    font-size: 100px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(19, 119, 5);
-    
-  }
-  .winBut {
-    width: 100px;
-    height: 40px;
-    border-radius: 4px;
   }
   
+  .replayBut{
+    margin-left: 200px;
+    display: flex;
+    margin-top: 80px;
+  }
+  
+
+.winnerBox {
+  background-image: url(./img/perfect-princess-mononoke-wallpaper-hd-wallpapers-of-nature-full-hd-desktop-backgrounds-for-pc-mac-laptop-tablet-chez-lounge-furniture-princess-mononoke-1967159962.jpg);
+  display: flex;
+  border-radius: 25px;
+  width: 450px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.winner {
+  background: rgba(0, 0, 0, .3);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  visibility: hidden;
+}
+
+.winner.active {
+  visibility: visible;
+}
+
+.winnerText {
+  font-size: 60px;
+  margin-left: 50px;
+  display: flex;
+  font-family: 'Ghibli Regular';
+  color: black;
+¿
+}
+
+
+.winBut {
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  font-family: 'Ghibli Regular';
+  color: #fff;
+  font-size: 20px;
+  background-color: #30403A;
+  justify-content: center;
+}
+
+
