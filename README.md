@@ -12,7 +12,7 @@ Memory Match de estudio Ghibli es un juego de memoria que consiste en encontrar 
 #### Prototipo de alta fidelidad
 
 #### Testeos de usabilidad
-
+1.- Mujer de 37 años: Indica que le gusta el aspecto de la página aunque desconoce el concepto, expresa que es muy intuitivo diciendo que entiende cada ícono y botón que presenta. Se muestra interesada en memorizar las cartas antes de ser ocultadas y finaliza sentenciando que se entretuvo y cumple con su expectativa acerca de un juego de memoria clásico.
 
 
 
