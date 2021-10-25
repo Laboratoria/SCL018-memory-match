@@ -3,9 +3,14 @@
 }
 
 body {
+<<<<<<< HEAD
   margin: 0;
   /*padding: 0;
   border: 0;*/
+=======
+  padding: 0;
+  border: 0;
+>>>>>>> e5af66652d44c4cd46d1c97e3ce81e36b0c1e222
 }
 @font-face {
   font-family: 'Ghibli Bold';
@@ -107,7 +112,7 @@ body {
 .grid {
   display: grid;
   flex-wrap: wrap;
-  margin: auto;
+  margin: none;
   grid-template-columns: auto auto auto auto;
   border-radius: 25px;
   background: rgba(212, 26, 26, 0.23);
@@ -204,14 +209,13 @@ body {
   background-size: cover;
   display: grid;
   height: 100vh;
-  width: 60vw;
 }
 
 @media (min-width: 768px) {
   .mononokeBg {
     background-image: url('./img/fondoprincesa.png');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     position: relative;
     display: grid;
     flex-wrap: wrap;
@@ -330,7 +334,6 @@ body {
 .winnerBox {
   background-image: url(./img/Ganaste.gif);
   display: table-cell;
-  border-radius: 25px;
   width: 450px;
   justify-content: center;
   background-repeat: no-repeat;
