@@ -27,7 +27,10 @@ const App = () => {
   const box = document.createElement('div');
   box.className = 'Box';
   displayMononoke.appendChild(box);
+<<<<<<< HEAD
 
+=======
+>>>>>>> d3fbaf23dd2812b72cd63fcfe807954abb4d6e54
   //Contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';

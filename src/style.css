@@ -1,7 +1,7 @@
 #root {
   display: none;
 }
-
+/* Estilos generales*/
 body {
   margin: 0;
   padding: 0;
@@ -34,12 +34,16 @@ body {
 }
 
 .intro {
+<<<<<<< HEAD
   background-image: url('../img/kodamaIntro.gif');
+=======
+  background-image: url('../img/KodamaIntro.gif');
+>>>>>>> d3fbaf23dd2812b72cd63fcfe807954abb4d6e54
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
-
+ 
 .img-intro {
   position: relative;
   width: 500px;
@@ -104,7 +108,7 @@ body {
   border-radius: 10px;
 }
 
-/*css de gameplay*/
+/*css del tablero de juego*/
 .grid {
   display: grid;
   flex-wrap: wrap;
@@ -127,6 +131,7 @@ body {
   }
 }
 
+/* estilo y funcionalidad de flip a la carta*/
 .card {
   width: 65px;
   height: 80px;
@@ -154,7 +159,6 @@ body {
     animation: gameStart 3s;
   }
 }
-
 
 .card:hover {
   box-shadow: 0 4px 16px rgb(119, 219, 236);
@@ -199,12 +203,17 @@ body {
   }
 }
 
+.flipCard {
+  transform: rotateY(180deg);
+}
+
+/* Estilos de fondo tablero*/
 .mononokeBg {
   background-image: url('./img/fondoprincesa.png');
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  height: 100vh;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -243,7 +252,7 @@ body {
     grid-row-end: 1;
   }
 }
-
+/* media queries para hacer el tablero responsive*/
 .Box {
   display: grid;
 }
@@ -262,7 +271,7 @@ body {
   margin-left: 10px;
   margin-right: 30px;
   margin-bottom: 50px;
-  margin-top: none;
+  margin-top: 10px;
 
 }
 
@@ -277,10 +286,6 @@ body {
     margin-bottom: 50px;
     margin-top: none;
   }
-}
-
-.flipCard {
-  transform: rotateY(180deg);
 }
 
 .matchCards {
@@ -312,7 +317,14 @@ body {
 
 }
 
-
+@media (min-width: 768px) {
+  .monoGif{
+    width: 60%;
+    height: 20%;
+    margin-left: 35px;
+    display: flex;
+  }
+}
   .monoGif{
     width: 80%;
     height: 40%;
@@ -320,13 +332,19 @@ body {
     display: flex;
   }
   
+  @media (min-width: 768px) {
+    .replayBut{
+      margin-left: 120px;
+      display: flex;
+      margin-top: 6px;
+    } 
+  }
   .replayBut{
     margin-left: 200px;
     display: flex;
     margin-top: 80px;
   }
   
-
 .winnerBox {
   background-image: url(./img/Ganaste.gif);
   display: table-cell;
@@ -374,8 +392,7 @@ body {
   margin-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
-  
-  
+   
 }
 .winBut:hover {
   box-shadow: 0 4px 16px rgb(119, 219, 236);
