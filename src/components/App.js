@@ -21,7 +21,7 @@ const App = () => {
   //Esto debería quedar general (para hacer los temas según la elección de mazo)
   const logoHeader = document.createElement('img');
   logoHeader.className = 'logo';
-  logoHeader.src = './img/logoprincesa.png';
+  logoHeader.src = './img/MemoryLogo.png';
   header.appendChild(logoHeader);
 
   //Contenedor de las cartas (también general)
