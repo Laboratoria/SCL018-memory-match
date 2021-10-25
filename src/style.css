@@ -34,7 +34,7 @@ body {
 }
 
 .intro {
-  background-image: url('./img/KodamaIntro.gif');
+  background-image: url('../img/KodamaIntro.gif');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
