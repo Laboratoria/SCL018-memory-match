@@ -24,15 +24,19 @@ const App = () => {
   logoHeader.src = './img/MemoryLogo.png';
   header.appendChild(logoHeader);
 
+  const box = document.createElement('div');
+  box.className = 'Box';
+  displayMononoke.appendChild(box);
+
   //Contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
-  displayMononoke.appendChild(cardsBox);
+  box.appendChild(cardsBox);
 
   //Cuadrícula para mostrar puntaje (general)
   const scoreBox = document.createElement('div');
   scoreBox.className = 'scoreBox';
-  displayMononoke.appendChild(scoreBox);
+  box.appendChild(scoreBox);
 
   //Mostrar el puntaje
   const theScore = document.createElement('p');
@@ -105,7 +109,7 @@ const App = () => {
 
         setTimeout(() => {
           matchCards(clickCard);
-        }, 3000);
+        }, 2500);
 
       }
     }
@@ -116,22 +120,24 @@ const App = () => {
       let matchPos = []; //Se crea variable con array abierto.
       if (array.length == 2 && array[0].id == array[1].id) { //Se comparan los id de los elementos clickeados.
         matchPos.push(array[0], array[1]); //Si son iguales se encierran los elementos en la variable.
-        matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
+       {matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
           element.classList.add("matchCards");
-        });
+        })};
         score += 100;
         scoreNum.innerHTML = score;
-        if (score == 200) {
+        if (score == 600) {
           winner.classList.add('active');
         }
         array.length = 0; //Si hacen match se vacía el array (parámetro).
+        console.log (true)
       } else { //Si no hacen match...
         document.querySelectorAll(".flipCard").forEach(element => { //Se toman los elementos y se remueve el flip para que se volteen las cartas.
           element.classList.remove("flipCard");
         });
         array.length = 0; //Si no hacen match se vacía el array (parámetro).
+        
       }
-
+        
     };
 
   }

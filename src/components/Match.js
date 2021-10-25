@@ -1,9 +1,10 @@
 //Funcion Match
 const matchCards = (array) => {
   let matchPos = []; //Se crea variable con array abierto.
-    if (array.length == 2 && array[0].id == array[1].id) { //Se comparan los id de los elementos clickeados.
+    if (array.length === 2 && array[0].id === array[1].id) { //Se comparan los id de los elementos clickeados.
       matchPos.push(array[0], array[1]); //Si son iguales se insertan al final del arreglo MatchPos
       matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
+        
         element.classList.add("matchCards");
       });
       //score += 100;
