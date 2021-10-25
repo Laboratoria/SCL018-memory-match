@@ -3,10 +3,11 @@
 }
 
 body {
+  margin: 0;
   padding: 0;
   border: 0;
-  margin: 0;
 }
+
 @font-face {
   font-family: 'Ghibli Bold';
   font-style: normal;
