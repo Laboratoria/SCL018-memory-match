@@ -122,14 +122,13 @@ const App = () => {
         matchPos.push(array[0], array[1]); //Si son iguales se encierran los elementos en la variable.
        {matchPos.forEach(element => { //Se recorre el array y se cambian las clases de los elementos.
           element.classList.add("matchCards");
-        })};
+        })}
         score += 100;
         scoreNum.innerHTML = score;
         if (score == 600) {
           winner.classList.add('active');
         }
         array.length = 0; //Si hacen match se vacía el array (parámetro).
-        console.log (true)
       } else { //Si no hacen match...
         document.querySelectorAll(".flipCard").forEach(element => { //Se toman los elementos y se remueve el flip para que se volteen las cartas.
           element.classList.remove("flipCard");
