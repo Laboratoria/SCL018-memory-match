@@ -24,16 +24,10 @@ const App = () => {
   logoHeader.src = './img/MemoryLogo.png';
   header.appendChild(logoHeader);
 
-<<<<<<< HEAD
-  const Box = document.createElement('div');
-  Box.className = 'Box';
-  displayMononoke.appendChild(Box);
-=======
   const box = document.createElement('div');
   box.className = 'Box';
   displayMononoke.appendChild(box);
 
->>>>>>> e5af66652d44c4cd46d1c97e3ce81e36b0c1e222
   //Contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
@@ -115,7 +109,7 @@ const App = () => {
 
         setTimeout(() => {
           matchCards(clickCard);
-        }, 2500);
+        }, 1200);
 
       }
     }
@@ -135,12 +129,13 @@ const App = () => {
           winner.classList.add('active');
         }
         array.length = 0; //Si hacen match se vacía el array (parámetro).
+        return true;
       } else { //Si no hacen match...
         document.querySelectorAll(".flipCard").forEach(element => { //Se toman los elementos y se remueve el flip para que se volteen las cartas.
           element.classList.remove("flipCard");
         });
         array.length = 0; //Si no hacen match se vacía el array (parámetro).
-        
+        return false;
       }
         
     };
