@@ -49,4 +49,7 @@ En sus tiempos libres y en multiples dispositivos
 [_Link de prototipo de Figma_](https://www.figma.com/file/iyYqH510cBTQekA7fVLXn2/Ghibli's-Memory-Match-Game?node-id=0%3A1)
 
 #### Testeos de usabilidad
+
 1.- Mujer de 37 años: Indica que le gusta el aspecto de la página aunque desconoce el concepto, expresa que es muy intuitivo diciendo que entiende cada ícono y botón que presenta. Se muestra interesada en memorizar las cartas antes de ser ocultadas y finaliza sentenciando que se entretuvo y cumple con su expectativa acerca de un juego de memoria clásico.
+
+2.- Mujer de 21 años: Le gusta la temática del juego, los colores de fondo y la música es relajante. No necesita leer las instrucciones para comenzar a jugar. Juega el juego varias veces diciendo que la entretuvo, le gustaría que tuviese más niveles. 

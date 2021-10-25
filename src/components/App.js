@@ -24,16 +24,9 @@ const App = () => {
   logoHeader.src = './img/MemoryLogo.png';
   header.appendChild(logoHeader);
 
-<<<<<<< HEAD
-  const Box = document.createElement('div');
-  Box.className = 'Box';
-  displayMononoke.appendChild(Box);
-=======
   const box = document.createElement('div');
   box.className = 'Box';
   displayMononoke.appendChild(box);
-
->>>>>>> e5af66652d44c4cd46d1c97e3ce81e36b0c1e222
   //Contenedor de las cartas (también general)
   const cardsBox = document.createElement('div');
   cardsBox.className = 'cardsBox';
