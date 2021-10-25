@@ -105,7 +105,7 @@ const App = () => {
 
         setTimeout(() => {
           matchCards(clickCard);
-        }, 2000);
+        }, 3000);
 
       }
     }
