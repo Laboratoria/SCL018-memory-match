@@ -3,15 +3,11 @@
 }
 
 body {
-<<<<<<< HEAD
   margin: 0;
-  /*padding: 0;
-  border: 0;*/
-=======
   padding: 0;
   border: 0;
->>>>>>> e5af66652d44c4cd46d1c97e3ce81e36b0c1e222
 }
+
 @font-face {
   font-family: 'Ghibli Bold';
   font-style: normal;
