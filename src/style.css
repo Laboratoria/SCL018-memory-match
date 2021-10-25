@@ -81,7 +81,7 @@ body {
   background-color: #042629;
   outline: none;
   border: none;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   margin-top: none;
   justify-content: center;
   cursor: url('./img/cursor.cur'), auto;
@@ -362,7 +362,7 @@ body {
   margin-left: 50px;
   display: flex;
   font-family: 'Ghibli Regular';
-  color: black;
+  color: rgb(187, 170, 16);
 }
 
 
@@ -381,5 +381,50 @@ body {
 .winBut:hover {
   box-shadow: 0 4px 16px rgb(119, 219, 236);
 }
+.overlay {
+  background: rgba(0, 0, 0, .3);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*text-align: center;*/
+  visibility: hidden;
+}
+.instructions {
+  background: #c0a743;
+  border-radius: 5px;
+  font-family: 'Ghibli Regular';
+  padding: 20px;
+  width: 600px;
+  text-align: center;
+}
+h2 {
+  display: flex;
+  font-family: 'Ghibli Regular';
+  font-size: 25px;
+  color: #042629;
+  margin-left: 200px;
 
-
+}
+p {
+  display: flex;
+  font-family: 'Ghibli Regular';
+  font-size: 20px;
+  color: #042629;
+  margin-left: 40px;
+}
+.closeInst {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  font-family: 'Ghibli Regular';
+  font-size: 15px;
+  margin-left: 550px;
+  color: #042629;
+}
+.overlay.show {
+  visibility: visible;
+}

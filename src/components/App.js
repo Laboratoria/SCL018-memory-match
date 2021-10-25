@@ -5,7 +5,6 @@ import shuffle from './shuffle.js'; // Importar función shuffle
 const App = () => {
   const el = document.createElement('div');
   el.className = 'App';
-  el.textContent = '';
   //Declaro variables a utilizar
   let clickCard = [];
   let score = 0;
@@ -75,7 +74,6 @@ const App = () => {
   winnerBox.appendChild(winBut);
   displayMononoke.appendChild(winner);
 
-  //document.getElementById("btn-intro").addEventListener("click",displayMononoke);
 
   //Duplicar cada item de la data y randomizarlos (general, para ser usado por cada mazo)
   let doubleArray = Mononoke.items.concat(Mononoke.items); // Declara variable que dobla los items de Mononoke de Ghibli.js
